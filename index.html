@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Isle Evrima | Build Lab v22</title>
+<meta name="description" content="Planeje sua build de mutações para The Isle Evrima. Compare builds, veja porcentagens reais por estágio e compartilhe com amigos. Gratuito, sem cadastro.">
+<meta name="keywords" content="the isle evrima, build lab, mutações, mutations, dinosaur build, allosaurus, tyrannosaurus, triceratops, pteranodon, evrima guide">
+<meta name="author" content="The Isle Build Lab">
+<meta name="robots" content="index, follow">
+<!-- Open Graph (WhatsApp, Discord, Twitter) -->
+<meta property="og:title" content="The Isle Evrima — Build Lab">
+<meta property="og:description" content="Planeje e compartilhe suas builds de mutações para The Isle Evrima. Compare builds lado a lado com efeitos reais.">
+<meta property="og:image" content="https://www.theisle.info/images/dinos/tyrannosaurus.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Isle Evrima — Build Lab">
+<meta name="twitter:description" content="Planeje e compartilhe suas builds de mutações para The Isle Evrima.">
+<meta name="twitter:image" content="https://www.theisle.info/images/dinos/tyrannosaurus.jpg">
+<!-- Favicon SVG inline -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230d1511'/><text y='24' x='4' font-size='22'>🦖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1511;--panel:#17231b;--panel2:#1e2d23;--line:#34483a;--txt:#edf5ed;--muted:#a9b9aa;--green:#a8dc7b;--orange:#e18a68;--blue:#83bde0;--gold:#e8c15a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0,#263d2d 0,transparent 38%),var(--bg);color:var(--txt);font:15px/1.5 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif}
+main{max-width:1440px;margin:auto;padding:28px 28px 60px}.eyebrow{color:var(--green);letter-spacing:.15em;text-transform:uppercase;font-size:11px;font-weight:800}h1{font-size:clamp(28px,4vw,43px);margin:6px 0;line-height:1.1}h2{font-size:18px;margin:0 0 14px}p,.muted{color:var(--muted)}.hero{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}.version{border:1px solid var(--line);padding:7px 12px;border-radius:99px;color:var(--green);white-space:nowrap}.layout{display:grid;grid-template-columns:360px 1fr;gap:20px}.panel{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:17px;min-width:0}.field{margin:13px 0}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}select,input[type=search]{width:100%;background:#101a13;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit}button{font:inherit;cursor:pointer}.slots,.actions,.filters{display:flex;gap:7px;flex-wrap:wrap}.slots button,.filters button,.btn{border:1px solid var(--line);background:#111b14;color:var(--muted);border-radius:9px;padding:9px 12px}.slots button{flex:1;padding:9px 4px}.slots button.active,.filters button.active{background:#304b32;color:#edffe4;border-color:var(--green)}.btn.primary{background:var(--green);color:#142014;border-color:var(--green);font-weight:750}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.metric{background:#101a13;border:1px solid var(--line);border-radius:11px;padding:11px}.metric strong{display:block;font-size:25px}.metric small{color:var(--muted)}.bar{height:7px;background:#080e0a;border-radius:9px;overflow:hidden;margin-top:6px}.bar span{height:100%;display:block;background:var(--orange)}.bar.blue span{background:var(--blue)}.grade{margin-top:14px;background:#101a13;border:1px solid var(--line);border-radius:11px;padding:12px}.grade strong{display:block;font-size:20px;color:var(--green)}.hint{font-size:13px;color:var(--muted)}
+.mname{font-size:15px;margin-bottom:2px}
+.mutation .pills{margin-top:4px}
+.mutation.selected{border-width:2px;padding:11px}
+.pill{font-size:11px;padding:2px 8px;border-radius:99px;background:#0d1511;border:1px solid var(--line);color:var(--muted)}.pill.a{border-color:var(--orange);color:var(--orange)}.pill.s{border-color:var(--green);color:var(--green)}.pill.rec{border-color:var(--green);background:#223624;color:#d5ffd0}.pill.pill-ef{border-color:var(--gold);color:var(--gold);cursor:help}.empty{text-align:center;padding:36px;color:var(--muted)}
+[hidden]{display:none!important}.priority-list{display:grid;gap:8px;margin:10px 0}.priority-opt{display:flex;align-items:center;gap:8px;padding:10px;background:#111b14;border:1px solid var(--line);border-radius:10px;font-size:13px;cursor:pointer}.priority-opt.on{border-color:var(--green);background:#263a2a}.priority-opt input{accent-color:var(--green)}.custom-option.off{opacity:.45}.dist{font-size:13px;color:var(--green);margin:0 0 12px}.summary-meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.summary-list{display:grid;gap:10px;margin:18px 0}.summary-item{padding:13px 15px;background:#111b14;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:11px}.summary-item .mname{font-size:16px}.summary-item .desc{font-size:13px}.summary-actions{display:flex;gap:8px;flex-wrap:wrap}.summary-wrap{max-width:760px;margin:auto}
+.preset-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.preset-grid .btn{display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:12px;height:auto}
+.preset-grid .btn strong{font-size:15px;margin-bottom:2px}
+.preset-grid .btn small{font-size:11px;opacity:0.8;line-height:1.2}
+.preset-grid .btn.active{background:var(--green);color:#142014;border-color:var(--green)}
+.preset-grid .btn.active small{color:#142014;opacity:0.9}
+.preset-grid .btn.off{opacity:.35;cursor:not-allowed}
+.type-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:10px}
+.type-filters button{width:100%;min-width:0;padding:8px 3px;font-size:10px;text-transform:uppercase;font-weight:700;border:1px solid var(--line);background:#111b14;color:var(--muted);border-radius:8px;white-space:nowrap;letter-spacing:-.04em}
+.type-filters button:first-child{grid-column:1 / -1;justify-self:center;width:42%;letter-spacing:0}
+.type-filters button.active{border-color:var(--green);color:var(--txt);background:#1a281d}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 12% 0,#2a4a34 0,transparent 42%),radial-gradient(ellipse at 100% 100%,#2b3a24 0,transparent 38%),var(--bg);background-attachment:fixed}
+h1,h2,.mname,.grade strong,.metric strong{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700}
+.chip strong{font-family:'Plus Jakarta Sans',system-ui,sans-serif;letter-spacing:0}
+.chip small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:600;opacity:0.8}
+h1{font-size:clamp(32px,5vw,48px);font-weight:800;letter-spacing:-0.02em}h2{font-size:20px;font-weight:700;letter-spacing:-0.01em}
+.hero{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+.hero-r{display:flex;flex-direction:column;align-items:flex-end;gap:8px}.by{font-size:14px;color:var(--muted)}.by b{color:var(--txt)}
+.layout aside{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow:auto}
+.rightcol{display:grid;gap:18px;min-width:0;align-content:start}
+.panel{box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.stage{display:grid;grid-template-columns:1fr;gap:0;padding:0;overflow:hidden}.stage .scene{order:-1}
+.stage-info{padding:18px 24px 22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:10px 28px;align-items:start}.stage-info .chips{grid-column:2;grid-row:1/4;margin:0;align-content:center}
+.stage-info h2{font-size:38px;margin:0;line-height:1}.stage-info p{margin:2px 0 0}
+.badge-group{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.badge{border:1px solid;border-radius:99px;padding:2px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.badge.prime{border-color:var(--gold);background:rgba(232,193,90,.15);color:var(--gold)}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px}
+.chip{background:#101a13;border:1px solid var(--line);border-radius:10px;padding:8px 10px}.chip small{display:block;color:var(--muted);font-size:10.5px;line-height:1.2;text-transform:uppercase;letter-spacing:.04em}.chip strong{font-size:17px;font-weight:700}.chip span{display:block;font-size:11px;color:#859c87;margin-top:1px}.chip-bar{height:3px;background:#1a2b1d;border-radius:9px;overflow:hidden;margin-top:5px}.chip-bar span{height:100%;display:block;border-radius:9px;background:var(--green);transition:width .6s cubic-bezier(.22,.68,0,1.2)}
+.scene{line-height:0;min-width:0;background:#09120c}.scene svg{width:100%;height:auto;display:block}
+.field-dossier{min-height:380px;display:grid;grid-template-columns:1fr 1.4fr;background:linear-gradient(135deg,#e2e6d5 0%,#f5f3e8 48%,#d5dbbf 100%);color:#1d2a20;overflow:hidden;position:relative;box-shadow:inset 0 0 80px rgba(0,0,0,0.05)}.field-dossier:after{content:'THE ISLE \2022  FIELD NOTES';position:absolute;right:16px;bottom:8px;color:#53654c;font-size:8.5px;letter-spacing:.12em;opacity:.45;font-weight:700;pointer-events:none;z-index:0}.dossier-art{position:relative;padding:0;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.6),transparent 75%);display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:260px}.dino-real-art{width:105%;height:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 15px 10px rgba(0,0,0,0.3));mix-blend-mode:multiply;transition:transform 0.4s ease}.dossier-kicker{position:absolute;top:18px;left:22px;font-size:10px;letter-spacing:.15em;color:#53654c;font-weight:800;z-index:5}.dossier-stamp{position:absolute;bottom:22px;left:24px;border:3px solid #8c6147;color:#8c6147;padding:6px 10px;text-align:center;font-size:10px;line-height:1.1;transform:rotate(-8deg);font-weight:800;z-index:5;background:rgba(245,243,232,0.4);box-shadow:2px 2px 0 rgba(140,97,71,0.1)}.dossier-stamp b{font-size:16px}.dossier-copy{padding:40px 35px 32px;border-left:1px solid rgba(62,83,59,0.15);display:flex;flex-direction:column;justify-content:center;z-index:3;position:relative}.dossier-type{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#597154;font-weight:800;margin-bottom:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dossier-copy h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:42px;line-height:1.1;margin:0 0 8px;color:#18271b;font-weight:800;letter-spacing:-0.03em}.dossier-copy h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;margin:0 0 18px;color:#607052;font-weight:700;line-height:1.3}.dossier-copy p{font-family:Georgia,serif;color:#344536;font-size:14px;line-height:1.6;margin:0 0 20px;font-style:italic}.dossier-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.dossier-tags span{font-size:12px;color:#53654c;background:rgba(89,113,84,.12);padding:2px 8px;border-radius:99px}.dossier-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.dossier-stats div{text-align:center;min-width:0}.dossier-stats div small{display:block;color:#53654c;font-size:9px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dossier-stats div b{display:block;font-size:15px;color:#1d2a20;white-space:nowrap}
+.scene.pop svg{animation:pop .5s ease-out}@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.field-dossier{transition:opacity .18s ease}
+.dossier-fade{opacity:0;transition:opacity .18s ease}
+@keyframes dossierIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dossier-in{animation:dossierIn .32s cubic-bezier(.22,.68,0,1.2) forwards}
+.dino-real-art{transition:opacity .25s ease,transform .32s cubic-bezier(.22,.68,0,1.2)}
+#summaryView .scene{border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.mutation{transition:border-color .15s,background .15s,transform .15s}.mutation:hover{border-color:#5e8a60;transform:translateY(-1px)}
+.btn,.slots button,.filters button{transition:border-color .15s,color .15s,filter .15s}.btn:hover:not(:disabled),.slots button:hover,.filters button:hover{border-color:var(--green);color:var(--txt)}.btn.primary:hover:not(:disabled){filter:brightness(1.08);color:#142014}.btn:disabled{opacity:.45;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+footer.site{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted)}footer.site b{color:var(--txt)}.credit-line{margin-top:18px}
+.legend-bar{display:flex;align-items:center;justify-content:space-between;background:#0d1810;border-top:1px solid var(--line);padding:7px 18px;font-size:11px;color:var(--muted)}
+.legend-bar b{color:var(--gold)}
+@media(max-width:1050px) and (min-width:851px){main{padding:22px 14px 48px}.layout{grid-template-columns:300px 1fr;gap:14px}.panel{padding:14px}.stage-info{grid-template-columns:1fr}.stage-info .chips{grid-column:1;grid-row:auto;margin-top:10px}.field-dossier{grid-template-columns:1fr 1fr}.dossier-copy{padding:28px 24px}.dossier-copy h3{font-size:34px}.actions .btn{flex:1;min-width:145px}}
+@media(max-width:850px){main{padding:18px 12px 40px}.layout{grid-template-columns:1fr}.layout aside{position:static;max-height:none}.hero{align-items:flex-start;flex-direction:column;gap:12px}.hero-r{align-items:flex-start;width:100%}.version{white-space:normal;font-size:13px}.stage-info{grid-template-columns:1fr;padding:14px}.stage-info h2{font-size:28px}.stage-info .chips{grid-column:1;grid-row:auto;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:10px}.chip strong{font-size:14px}.chip small{font-size:9px}.field-dossier{grid-template-columns:1fr;min-height:0}.dossier-art{min-height:220px}.dossier-copy{border-left:0;border-top:1px solid rgba(62,83,59,.15);padding:18px 16px 26px}.dossier-type{white-space:normal;line-height:1.3}.dossier-copy h3{font-size:30px;line-height:1.05}.dossier-stats{margin-bottom:22px}.dossier-copy h4{font-size:14px;margin-bottom:12px}.dossier-copy p{font-size:13px;margin-bottom:14px}.dossier-tags{margin-bottom:14px}.dossier-stats{grid-template-columns:repeat(3,1fr);gap:6px}.dossier-stats b{font-size:13px}.dossier-stats small{font-size:8px}.type-filters button{font-size:10px}.actions{flex-direction:column}.actions .btn{width:100%;text-align:center;min-width:0}.userbar{justify-content:flex-start}}
+@media(max-width:480px){.dossier-type{font-size:10px;letter-spacing:.06em}.stage-info .chips{grid-template-columns:repeat(2,minmax(0,1fr))}.stage-info h2{font-size:24px}.dossier-art{min-height:200px}.dossier-stats{grid-template-columns:repeat(3,1fr);gap:4px}.dossier-stats b{font-size:12px}.dossier-stats small{font-size:7.5px}.dossier-copy h3{font-size:26px}.dossier-copy h4{font-size:13px}.dossier-copy p{font-size:12px;margin-bottom:12px}.dossier-tags{margin-bottom:12px;gap:6px}.dossier-tags span{font-size:11px}.preset-grid{grid-template-columns:1fr}.scoregrid{grid-template-columns:1fr}.type-filters{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}.type-filters button{font-size:9px;padding-left:1px;padding-right:1px}.type-filters button:first-child{width:48%}.mb-grid{grid-template-columns:1fr}.hero h1{font-size:28px}}
+@media(max-width:360px){.type-filters{grid-template-columns:repeat(3,minmax(0,1fr))}.type-filters button{font-size:8px;letter-spacing:-.06em}.type-filters button:first-child{width:55%;font-size:10px;letter-spacing:0}.panel{padding:13px}}
+
+.userbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;font-size:13px;color:var(--muted)}.userbar b{color:var(--txt)}.userbar .btn{padding:6px 11px;font-size:13px}
+.fab-summary{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:50;background:var(--green);color:#142014;border:none;border-radius:99px;padding:14px 28px;font:700 15px/1 'Plus Jakarta Sans',sans-serif;box-shadow:0 4px 20px rgba(0,0,0,.4);cursor:pointer;white-space:nowrap;transition:opacity .2s,transform .2s}
+.fab-summary:disabled{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(8px)}
+@media(max-width:850px){.fab-summary{display:block}}
+.login{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:18px;overflow:auto;background:radial-gradient(ellipse at 20% 10%,#2c4a35 0,transparent 45%),radial-gradient(ellipse at 90% 100%,#2b3a24 0,transparent 40%),var(--bg)}
+.login-card{width:min(420px,100%);padding:30px 26px;text-align:center}.login-card .logo{font-size:46px;line-height:1}.login-card h1{margin:8px 0 4px}.login-card p{margin:0 0 18px;font-size:14px}
+.login-card input,.save-row input{width:100%;background:#101a13;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}.login-card input{text-align:center;font-size:17px}.login-card input:focus,.save-row input:focus{border-color:var(--green);outline:none}
+.login-err{min-height:20px;color:var(--orange);font-size:13px;margin:8px 0}.login-card .btn{width:100%;padding:12px}.login-note{margin-top:14px;font-size:12px;color:var(--muted)}
+.save-box{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.save-box h2{margin-bottom:10px}.save-row{display:flex;gap:8px;flex-wrap:wrap}.save-row input{flex:1;min-width:180px}
+.save-msg{min-height:20px;font-size:13px;color:var(--green);margin:8px 0 0}
+.mb-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}.mb-head h2{margin:0}
+.mb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.mb-card{background:#111b14;border:1px solid var(--line);border-left:3px solid var(--green);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}.mb-card h3{margin:0;font-size:17px;overflow-wrap:anywhere}
+.mb-chips{display:flex;gap:6px;flex-wrap:wrap}.mb-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:4px}.mb-actions .btn{padding:7px 11px;font-size:13px}
+.btn.danger:hover,.btn.danger.armed{border-color:var(--orange);color:var(--orange)}.mb-empty{text-align:center;padding:40px 10px;color:var(--muted)}.mb-warn{color:var(--gold);font-size:13px}
+@media print{.login,.userbar{display:none!important}}
+
+.mutations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}.mutations .empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--muted)}
+.mutation{display:flex;align-items:flex-start;gap:12px;padding:14px;background:#111b14;border:1px solid var(--line);border-left:4px solid #3b5440;border-radius:12px;cursor:pointer;min-width:0;box-shadow:0 2px 8px rgba(0,0,0,.25);transition:border-color .15s,background .15s,transform .15s}
+.mutation:hover{border-color:#5e8a60;border-left-color:#5e8a60;transform:translateY(-1px)}
+.mutation.selected{border-width:1px;border-left-width:4px;padding:14px;border-color:var(--green);background:#223a27}
+.mutation:has(input:disabled){opacity:.6;cursor:not-allowed}
+.mutation .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.mutation .pill{white-space:nowrap}
+.mutation input{flex:none;width:19px;height:19px;margin:2px 0 0;accent-color:var(--green)}
+.mutation .mname{font-size:16px}.mutation .desc{font-size:13px;color:var(--muted);margin-top:2px}
+@media(max-width:760px){.mutations{grid-template-columns:1fr}}
+.mb-tools{display:flex;gap:8px;flex-wrap:wrap}
+.import-box{margin-bottom:14px}.import-box textarea{width:100%;background:#101a13;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit;font-size:13px;margin-bottom:8px;resize:vertical}.import-box textarea:focus{border-color:var(--green);outline:none}
+.mb-card .mb-imp{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em}.mb-card .mb-sp{font-size:18px;font-weight:700;color:var(--txt);margin:0}
+/* ── Comparação de builds ── */
+.cmp-modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(6px)}
+.cmp-modal.hidden{display:none}
+.cmp-box{background:var(--panel);border:1px solid var(--line);border-radius:20px;width:min(860px,100%);max-height:90vh;overflow-y:auto;padding:26px}
+.cmp-box h2{margin:0 0 20px;font-size:21px}
+.cmp-selects{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px}
+.cmp-selects select{width:100%;background:#101a13;color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit}
+.cmp-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.cmp-col{background:#111b14;border:1px solid var(--line);border-radius:14px;padding:16px}
+.cmp-col h3{font-size:18px;margin:0 0 2px;color:var(--green)}
+.cmp-byline{font-size:11px;color:var(--muted);opacity:.7;margin-bottom:4px}
+.cmp-sp{font-size:12px;color:var(--muted);margin-bottom:3px}
+.cmp-mut{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.cmp-mut span{font-size:12px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);background:#0d1511}
+.cmp-mut span.shared{border-color:var(--green);color:var(--green);background:rgba(168,220,123,.08)}
+.cmp-mut span.unique{border-color:var(--blue);color:var(--blue);background:rgba(131,189,224,.08)}
+/* diff row */
+.cmp-diff-row{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:start;background:#0d1511;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.cmp-diff-side{display:flex;flex-direction:column;gap:7px}
+.cmp-diff-center{display:flex;align-items:center;justify-content:center;padding-top:4px}
+.cmp-diff-label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.cmp-diff-chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.cmp-none{color:var(--muted);font-size:12px;font-style:italic}
+/* stats */
+.cmp-stats-section{background:#0d1511;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.cmp-stat-header{display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:10px}
+.cmp-stat-header span:first-child{text-align:left}.cmp-stat-header span:last-child{text-align:right}
+.cmp-stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;align-items:center;margin-bottom:8px;font-size:14px}
+.cmp-stat-row .label{color:var(--muted);text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.cmp-stat-row .val{font-weight:700}.cmp-stat-row .val:last-child{text-align:right}.cmp-stat-row .val.better{color:var(--green)}
+/* effects table */
+.cmp-effects-section{background:#0d1511;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.cmp-effects-header{display:grid;grid-template-columns:72px 1fr 72px;gap:8px;text-align:center;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:10px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.cmp-effects-header span:first-child{text-align:left}.cmp-effects-header span:last-child{text-align:right}
+.cmp-ef-row{display:grid;grid-template-columns:72px 1fr 72px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(52,72,58,.5)}
+.cmp-ef-row:last-child{border-bottom:none}
+.cmp-ef-a{text-align:left}.cmp-ef-b{text-align:right}
+.cmp-ef-mid{display:flex;flex-direction:column;gap:1px}
+.cmp-ef-name{font-size:13px;font-weight:600}
+.cmp-ef-desc{font-size:11px;color:var(--muted)}
+.cmp-ef-val{font-size:13px;font-weight:700;padding:2px 7px;border-radius:99px;display:inline-block}
+.cmp-ef-val.shared{color:var(--green);background:rgba(168,220,123,.1);border:1px solid rgba(168,220,123,.3)}
+.cmp-ef-val.unique{color:var(--blue);background:rgba(131,189,224,.1);border:1px solid rgba(131,189,224,.3)}
+.cmp-ef-absent{font-size:13px;color:#3a4e3c;font-weight:700}
+/* conflicts */
+.cmp-conflicts{background:rgba(225,138,104,.06);border:1px solid rgba(225,138,104,.3);border-radius:14px;padding:13px 16px;margin-bottom:16px}
+.cmp-section-label{font-size:12px;font-weight:700;color:var(--orange);margin-bottom:8px}
+.cmp-conflict-list{display:flex;flex-wrap:wrap;gap:7px}
+.cmp-conflict-chip{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid rgba(225,138,104,.4);color:var(--orange);background:rgba(225,138,104,.06)}
+.cmp-legend{font-size:12px;color:var(--muted);margin-top:4px;margin-bottom:16px}
+.cmp-close{margin-top:4px}
+@media(max-width:600px){.cmp-selects,.cmp-cols,.cmp-diff-row{grid-template-columns:1fr}}
+</style></head><body>
+<div class="login" id="login"><div class="panel login-card"><div class="logo">🦖</div><div class="eyebrow">The Isle: Evrima</div><h1>Build Lab</h1><p>Digite seu nick para entrar e guardar suas builds.</p><input id="nickInput" maxlength="20" placeholder="Seu nick" autocomplete="off" aria-label="Seu nick"><div class="login-err" id="loginErr" role="alert"></div><button class="btn primary" id="loginBtn">Entrar</button><div class="login-note">Sem senha: o nick só identifica suas builds neste navegador.</div></div></div>
+<button class="fab-summary" id="fabSummary" disabled style="display:none">★ Ver resumo da build</button>
+<!-- Modal de comparação -->
+<div class="cmp-modal hidden" id="cmpModal">
+ <div class="cmp-box">
+  <h2 id="cmpTitle">⚖️ Comparar builds</h2>
+  <div class="cmp-selects">
+   <div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:6px">BUILD A</label><select id="cmpA"></select></div>
+   <div><label style="font-size:12px;color:var(--muted);display:block;margin-bottom:6px">BUILD B</label><select id="cmpB"></select></div>
+  </div>
+  <div id="cmpResult"></div>
+  <button class="btn cmp-close" id="cmpClose">✕ Fechar</button>
+ </div>
+</div>
+<main>
+<header class="hero"><div><div class="eyebrow">The Isle: Evrima • Patch 0.21+ Gateway</div><h1>Build Lab v22</h1><p>Monte sua build, compare estilos e consulte os dados precisos do auge (Elder Prime • 87,5%).</p></div><div class="hero-r"><div class="version">22 espécies • 5 modelos • Elder Prime (87,5%)</div><div class="userbar" id="userBar" hidden>Jogador: <b id="userName"></b><button class="btn" id="myBuildsBtn">★ Minhas builds (<span id="mbCount">0</span>)</button><button class="btn" id="logoutBtn">Sair</button></div></div></header>
+<div class="layout" id="editorView">
+<aside class="panel">
+<h2>Seu dinossauro</h2>
+<div class="field"><label>Filtrar por dieta</label>
+ <div class="type-filters" id="typeFilters">
+  <button class="active" data-type="all">Todos</button>
+  <button data-type="Carnívoro">Carnívoros</button>
+  <button data-type="Herbívoro">Herbívoros</button>
+  <button data-type="Onívoro">Onívoros</button>
+ </div>
+</div>
+<div class="field"><label for="dino">Espécie</label><select id="dino"></select></div>
+<div class="field"><label>Slots disponíveis</label><div class="slots" id="slots"><button class="active" data-n="4">4</button><button data-n="8">8</button><button data-n="12">12</button><button data-n="16">16</button></div></div>
+<h2 style="margin-top:20px">Modelos de build</h2>
+<p class="standard-note">Escolha um modelo pronto ou combine até 3. Com 2 ou 3 marcados, você define qual priorizar.</p>
+<div class="preset-grid" id="presets">
+ <button class="btn active" data-preset="recommended"><strong>★ Recomendada</strong><small>Perfil natural da espécie</small></button>
+ <button class="btn" data-preset="aggressive"><strong>⚔ Agressivo</strong><small>Pressão e dano em combate</small></button>
+ <button class="btn" data-preset="survival"><strong>♡ Sobrevivência</strong><small>Recuperação e autonomia</small></button>
+ <button class="btn" data-preset="tank"><strong>▣ Tanque</strong><small>Resistência a dano</small></button>
+ <button class="btn" data-preset="hunter"><strong>⌖ Caçador</strong><small>Perseguição, emboscada e abate</small></button>
+</div>
+<div id="priorityBox" hidden><h2>Priorizar o quê?</h2><div class="priority-list" id="priorityList"></div><p class="dist" id="distText"></p></div>
+<div class="actions"><button class="btn" id="standard">Voltar à recomendada</button><button class="btn" id="clear">Limpar seleção</button><button class="btn primary" id="showSummary" disabled>Mostrar resumo da build</button></div>
+<div class="grade"><small id="gradeTitle">PERFIL ATUAL DA BUILD</small><br><strong id="grade">Padrão</strong><p id="gradeText" style="margin:0">Build recomendada para a espécie.</p></div>
+<p class="hint">No The Isle: Evrima (0.21+), o dinossauro atinge a fase Adulta em 75% e alcança o <b>auge absoluto (Elder Prime) em 87,5%</b> de crescimento. Você pode combinar até 3 modelos e priorizar um estilo.</p>
+</aside>
+<div class="rightcol"><section class="panel stage"><div class="stage-info"><div><div class="badge-group"><span class="badge" id="stBadge"></span><span class="badge prime">Elder Prime • 87,5%</span></div><h2 id="stName"></h2><p id="stRole"></p></div><div class="chips" id="stChips"></div></div><div class="scene" id="scene"></div></section>
+<section class="panel">
+<div class="sectionhead"><div><h2 style="margin:0">Editor de mutações</h2><p id="speciesInfo" style="margin:4px 0">Escolha um dinossauro.</p></div><div class="count" id="count">0 / 4</div></div>
+<div class="field" style="display:flex;gap:8px;align-items:center">
+ <input type="search" id="search" placeholder="Buscar mutação pelo nome ou efeito..." style="flex:1">
+ <button class="btn" id="reverseBtn" title="Ver quais espécies usam esta mutação" style="white-space:nowrap;padding:11px 13px;font-size:12px">🔍 Espécies</button>
+</div>
+<div id="reversePanel" hidden style="background:#0d1511;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:8px;font-size:13px"></div>
+<div class="filters" id="filters"><button class="active" data-filter="all">Todas</button><button data-filter="atk">Combate</button><button data-filter="surv">Sobrevivência</button><button data-filter="breed">Reprodução</button></div>
+<div id="list" class="mutations"></div>
+</section></div></div>
+<section class="panel" id="summaryView" hidden><div class="summary-wrap">
+ <div class="scene" id="sumScene"></div><div class="eyebrow" style="margin-top:18px">Resumo da build</div><h1 id="sumName"></h1><p id="sumRole" style="margin:0"></p>
+ <div class="summary-meta" id="sumMeta"></div>
+ <h2 style="margin-top:18px">Mutações escolhidas</h2>
+ <div class="summary-list" id="sumList"></div>
+ <div class="summary-actions no-print"><button class="btn primary" id="backBtn">← Voltar à edição</button><button class="btn" id="copyBtn">Copiar resumo</button></div>
+ <div class="save-box no-print"><h2>Salvar em Minhas builds</h2><div class="save-row"><input id="buildName" maxlength="40" placeholder="Nome da build" aria-label="Nome da build"><button class="btn primary" id="saveBuild">Salvar build</button><button class="btn" id="updateBuild" hidden>Atualizar build aberta</button><button class="btn" id="exportCode">Copiar código da build</button><button class="btn" id="openMy">Abrir Minhas builds</button></div><p class="save-msg" id="saveMsg" role="status"></p></div>
+</div></section>
+<section class="panel" id="myBuildsView" hidden>
+ <div class="mb-head"><h2 id="mbTitle">Minhas builds</h2><div class="mb-tools"><button class="btn" id="mbCompare">⚖️ Comparar</button><button class="btn" id="mbImport">⇩ Importar build</button><button class="btn primary" id="mbBack">← Voltar ao montador</button></div></div>
+ <div class="import-box" id="importBox" hidden><textarea id="importCode" rows="3" placeholder="Cole aqui o código da build (começa com ISLE1.)" aria-label="Código da build"></textarea><div class="save-row"><button class="btn primary" id="importGo">Importar</button><button class="btn" id="importCancel">Cancelar</button></div></div>
+ <p class="mb-warn" id="mbWarn" hidden>Seu navegador bloqueou o armazenamento: as builds valem só enquanto esta página estiver aberta.</p>
+ <p class="save-msg" id="mbMsg" role="status"></p>
+ <div class="mb-grid" id="mbList"></div>
+</section>
+<footer class="site"><span>Criado por <b>Espindula</b> • © 2026 • Todos os direitos reservados.</span><span>Projeto de fã, sem afiliação com The Isle: Evrima ou Afterthought Studios. Dados sincronizados com o Patch 0.21+ (Evrima Quick Guide, The Isle Info, XGamingServer). Valores do auge representam o Elder Prime a 87,5% de crescimento.</span></footer>
+</main>
+<script>
+const species=[
+["Allosaurus","Carnívoro","Caçador móvel de sangramento","bleed land hunter"],
+["Austroraptor","Carnívoro","Caçador oportunista de margens","semi water hunter"],
+["Beipiaosaurus","Onívoro","Forrageador semiaquático","semi water evasive"],
+["Diabloceratops","Herbívoro","Defensor de investida","defender tank charge"],
+["Dryosaurus","Herbívoro","Forrageador evasivo","evasive speed scout"],
+["Gallimimus","Onívoro","Batedor veloz de bando","speed scout evasive"],
+["Herrerasaurus","Carnívoro","Emboscador vertical","ambush climb bleed"],
+["Hypsilophodon","Herbívoro","Batedor evasivo","evasive scout acid"],
+["Kentrosaurus","Herbívoro","Defensor espinhoso","defender bleed control"],
+["Maiasaura","Herbívoro","Defensor de manada","defender tank group"],
+["Omniraptor","Carnívoro","Caçador móvel de matilha","hunter pounce bleed group"],
+["Pachycephalosaurus","Herbívoro","Combatente de fraturas","charge fracture speed"],
+["Pteranodon","Carnívoro","Batedor aéreo","aerial scout fish"],
+["Stegosaurus","Herbívoro","Gigante defensivo","defender tank bleed"],
+["Tenontosaurus","Herbívoro","Defensor versátil","defender control fracture"],
+["Triceratops","Herbívoro","Muralha frontal","defender tank charge"],
+["Troodon","Carnívoro","Caçador venenoso de matilha","venom pounce night group"],
+["Tyrannosaurus","Carnívoro","Predador de topo","apex ambush tank"],
+["Carnotaurus","Carnívoro","Perseguidor de arrancada","speed charge hunter"],
+["Ceratosaurus","Carnívoro","Combatente resistente/necrófago","tank scavenger bite"],
+["Deinosuchus","Carnívoro","Emboscador aquático","aquatic ambush tank water"],
+["Dilophosaurus","Carnívoro","Predador noturno de pressão","night venom bleed"]
+];
+// M: [nome, tipo, descrição, agressão, sobrevivência, dieta, {stat, vals:[juv,sub,adu,eld], unit}]
+// vals = [Juvenil, Sub-adulto, Adulto, Elder]
+const M=[
+["Xerocole Adaptation","surv","Herbívoros recuperam água ao comer plantas.",1,5,"herb",{stat:"Recuperação de água ao comer plantas",vals:[15,20,25,25],unit:"%"}],
+["Hypervigilance","surv","Amplia o ângulo da câmera ao comer/beber e aumenta a percepção de passos.",2,7,"herb",{stat:"Ampliação do FOV + percepção",vals:[50,60,70,70],unit:"%"}],
+["Barometric Sensitivity","surv","Avisa quando uma tempestade se aproxima.",0,3,"herb",null],
+["Canibalistic","surv","Permite consumir indivíduos da mesma espécie.",1,2,"carn",null],
+["Osteophagic","surv","Comer ossos acelera a recuperação de fraturas.",0,4,"carn",null],
+["Augmented Tapetum","surv","Melhora a visão noturna (níveis de visão).",1,5,"carn",{stat:"Nível de visão noturna",vals:[1,2,3,3],unit:""}],
+["Hematophagy","surv","Consumir carne recupera uma porcentagem de água.",2,7,"carn",{stat:"Água recuperada ao comer carne",vals:[15,25,35,35],unit:"%"}],
+["Sustained Hydratation","surv","A água diminui mais devagar.",0,7,"both",{stat:"Redução no consumo de água",vals:[20,25,30,30],unit:"%"}],
+["Efficient Digestion","surv","A fome diminui mais devagar.",0,6,"both",{stat:"Redução no consumo de fome",vals:[20,25,30,30],unit:"%"}],
+["Enlarged Meniscus","surv","Quedas drenam stamina antes da vida.",2,8,"both",null],
+["Featherweight","surv","As pegadas desaparecem mais rapidamente.",1,4,"both",{stat:"Rapidez no desaparecimento de pegadas",vals:[50,50,50,50],unit:"%"}],
+["Wader","surv","Facilita andar em águas rasas.",1,3,"both",{stat:"Redução de resistência em águas rasas",vals:[25,50,75,75],unit:"%"}],
+["Increased Inspiratory Capacity","surv","Aumenta a quantidade de oxigênio.",2,8,"both",{stat:"Aumento de oxigênio",vals:[15,20,25,25],unit:"%"}],
+["Hydrodynamic","surv","Aumenta a velocidade de nado.",2,8,"both",{stat:"Aumento de velocidade de nado",vals:[15,20,25,25],unit:"%"}],
+["Submerged Optical Retention","surv","Melhora a visão debaixo d'água.",1,6,"both",{stat:"Melhora de visão subaquática",vals:[5,10,20,20],unit:"%"}],
+["Reabsorption","surv","A chuva recupera uma pequena parte da água.",0,4,"both",{stat:"Água recuperada pela chuva (doses)",vals:[1,2,3,3],unit:""}],
+["Infrasound Communication","surv","Diminui o volume do som ao escrever no chat.",0,1,"both",{stat:"Redução de volume do chat",vals:[50,60,70,70],unit:"%"}],
+["Enhanced Digestion","surv","Diminui o decaimento da dieta.",0,6,"both",{stat:"Redução no decaimento da dieta",vals:[10,15,25,25],unit:"%"}],
+["Heightened Ghrelin","surv","Aumenta a capacidade máxima do estômago.",0,5,"both",{stat:"Aumento da capacidade do estômago",vals:[25,50,75,75],unit:"%"}],
+["Reniculate Kidneys","surv","Permite beber água salgada.",0,5,"both",null],
+["Hemomania","atk","Aumenta o dano contra alvos que estão sangrando.",10,1,"carn",{stat:"Dano extra em alvos sangrando",vals:[5,7,10,10],unit:"%"}],
+["Accelerated Prey Drive","atk","Aumenta o dano contra alvos abaixo de 35% de vida.",10,1,"carn",{stat:"Dano extra em alvos com <35% de vida",vals:[10,15,20,20],unit:"%"}],
+["Hypermetabolic Inanition","atk","Quanto menor a fome, maior o dano.",7,0,"carn",{stat:"Bônus de dano máximo (fome zerada)",vals:[15,20,25,25],unit:"%"}],
+["Truculency","atk","Aumenta a chance de derrubar um atacante agarrado (bucking).",7,2,"herb",{stat:"Chance de bucking em agarrões",vals:[5,10,15,15],unit:"%"}],
+["Photosynthetic Regeneration","atk","Durante o dia, a stamina recupera mais rápido.",5,4,"herb",{stat:"Regeneração de stamina durante o dia",vals:[10,10,10,10],unit:"%"}],
+["Tactile Endurance","atk","Receber dano recupera uma porcentagem de stamina.",7,3,"herb",{stat:"Stamina recuperada ao receber dano",vals:[25,35,50,50],unit:"%"}],
+["Cellular Regeneration","atk","A vida se regenera mais rapidamente.",1,9,"both",{stat:"Aumento na regeneração de vida",vals:[15,20,25,25],unit:"%"}],
+["Gastronomic Regeneration","atk","Consumir alimentos recupera um pouco de vida.",1,6,"both",{stat:"Vida recuperada ao comer",vals:[5,10,15,15],unit:"%"}],
+["Hydroregenerative","atk","A vida se regenera mais rápido durante tempestades.",1,5,"both",{stat:"Regeneração de vida durante chuva",vals:[25,50,75,75],unit:"%"}],
+["Photosynthetic Tissue","atk","Aumenta a regeneração de vida durante o dia.",1,5,"both",{stat:"Regeneração de vida durante o dia",vals:[5,7,10,10],unit:"%"}],
+["Nocturnal","atk","Aumenta a regeneração de vida durante a noite.",1,5,"both",{stat:"Regeneração de vida durante a noite",vals:[5,7,10,10],unit:"%"}],
+["Traumatic Thrombosis","atk","Ao deitar, impede a morte por sangramento.",0,7,"both",null],
+["Epidermal Fibrosis","atk","Aumenta a resistência a sangramento.",2,7,"both",{stat:"Resistência a sangramento",vals:[15,20,25,25],unit:"%"}],
+["Osteosclerosis","atk","Aumenta a resistência a fraturas.",2,7,"both",{stat:"Resistência a fraturas",vals:[20,25,30,30],unit:"%"}],
+["Congenital Hypoalgesia","atk","Reduz o dano recebido de dinossauros maiores.",5,8,"both",{stat:"Redução de dano recebido de dinos maiores",vals:[15,20,25,25],unit:"%"}],
+["Multichambered Lungs","atk","Aumenta a stamina máxima recuperável.",3,5,"both",{stat:"Aumento de stamina máxima",vals:[5,10,15,15],unit:"%"}],
+["Reinforced Tendons","atk","Reduz a stamina gasta ao pular.",4,8,"both",{stat:"Redução de stamina ao pular",vals:[25,35,50,50],unit:"%"}],
+["Advanced Gestation","breed","Aumenta a velocidade de incubação do ovo.",0,0,"both",{stat:"Aumento de velocidade de incubação",vals:[50,75,null,null],unit:"%"}],
+["Prolific Reproduction","breed","Melhora recuperação, crescimento e necessidade de fome dos filhotes.",0,0,"both",null]
+];
+let slots=4,selected=[],filter="all",mode="recommended";
+let profile={aggression:55,balance:15,survival:15,tank:15};
+let customTraits=["aggression","balance","survival","tank"];
+const $=s=>document.querySelector(s), dino=$("#dino");
+let currentDiet = "all";
+function updateDinoList(){
+ const currentSelected = dino.value ? species[+dino.value][0] : null;
+ dino.innerHTML = "";
+ const filtered = [];
+ species.forEach((s, idx) => {
+  if(currentDiet === "all" || s[1] === currentDiet){
+   filtered.push({ s, idx });
+  }
+ });
+ filtered.sort((a,b) => a.s[0].localeCompare(b.s[0]));
+ filtered.forEach(item => {
+  let o = document.createElement("option");
+  o.value = item.idx;
+  o.textContent = item.s[0] + " — " + item.s[1];
+  dino.append(o);
+ });
+ if(currentSelected){
+  const found = filtered.find(x => x.s[0] === currentSelected);
+  if(found) dino.value = found.idx;
+  else if(filtered.length) dino.value = filtered[0].idx;
+ }
+ applyModels();
+}
+document.querySelectorAll("#typeFilters button").forEach(b => {
+ b.onclick = () => {
+  document.querySelectorAll("#typeFilters button").forEach(x => x.classList.toggle("active", x === b));
+  currentDiet = b.dataset.type;
+  updateDinoList();
+ };
+});
+function sp(){return species[+dino.value]}
+function allowed(m){if(m[0]==="Canibalistic"&&["Deinosuchus","Ceratosaurus"].includes(sp()[0]))return false;return m[5]==="both"||(m[5]==="carn"&&sp()[1]==="Carnívoro")||(m[5]==="herb"&&sp()[1]!=="Carnívoro")}
+function standardProfile(){
+ const tags=sp()[3],name=sp()[0];
+ if(name==="Tyrannosaurus")return {aggression:65,balance:15,survival:10,tank:10};
+ if(name==="Herrerasaurus")return {aggression:50,balance:20,survival:10,tank:20};
+ if(name==="Deinosuchus")return {aggression:35,balance:15,survival:15,tank:35};
+ if(tags.includes("apex"))return {aggression:55,balance:15,survival:10,tank:20};
+ if(tags.includes("tank")||tags.includes("defender"))return {aggression:20,balance:20,survival:15,tank:45};
+ if(tags.includes("speed")||tags.includes("scout")||tags.includes("evasive"))return {aggression:25,balance:30,survival:35,tank:10};
+ if(tags.includes("aquatic"))return {aggression:30,balance:20,survival:25,tank:25};
+ if(tags.includes("ambush")||tags.includes("hunter")||tags.includes("bleed"))return {aggression:45,balance:25,survival:20,tank:10};
+ return {aggression:30,balance:25,survival:25,tank:20};
+}
+function presetProfile(kind){
+ const tags=sp()[3],base=standardProfile();
+ if(kind==="recommended")return base;
+ if(kind==="aggressive")return {aggression:70,balance:15,survival:5,tank:10};
+ if(kind==="survival")return {aggression:10,balance:20,survival:60,tank:10};
+ if(kind==="tank")return {aggression:10,balance:15,survival:15,tank:60};
+ if(kind==="hunter"){
+  if(sp()[1]==="Carnívoro")return {aggression:55,balance:20,survival:20,tank:5};
+  return {aggression:25,balance:25,survival:40,tank:10};
+ }
+ return base;
+}
+const MODE_NAMES={recommended:"Recomendada",aggressive:"Agressivo",survival:"Sobrevivência",tank:"Tanque",hunter:"Caçador",custom:"Combinada"};
+let models=["recommended"],prioList=["equal"];
+function distribution(keys,prios){
+ const p={};keys.forEach(k=>p[k]=0);
+ if(keys.length===1){p[keys[0]]=100;return p}
+ if(prios.includes("equal")||prios.length===0){
+  const each=Math.floor(100/keys.length);let left=100;
+  keys.forEach((k,i)=>{p[k]=i===keys.length-1?left:each;left-=each});return p;
+ }
+ if(keys.length===2){
+  const pk=prios[0];const other=keys.find(k=>k!==pk);
+  p[pk]=70;p[other]=30;return p;
+ }
+ if(keys.length===3){
+  if(prios.length===1){
+   const pk=prios[0];const rest=keys.filter(k=>k!==pk);
+   p[pk]=70;p[rest[0]]=15;p[rest[1]]=15;return p;
+  }
+  if(prios.length===2){
+   const rest=keys.find(k=>!prios.includes(k));
+   p[prios[0]]=40;p[prios[1]]=40;p[rest]=20;return p;
+  }
+ }
+ return p;
+}
+function distText(p){return Object.entries(p).filter(e=>e[1]>0).sort((x,y)=>y[1]-x[1]).map(e=>MODE_NAMES[e[0]]+" "+e[1]+"%").join(" • ")}
+function blendProfile(){
+ const d=distribution(models,prioList),out={aggression:0,balance:0,survival:0,tank:0};
+ models.forEach(k=>{const pp=presetProfile(k);for(const t in out)out[t]+=pp[t]*d[k]/100});
+ return out;
+}
+function updateModelUI(){
+ document.querySelectorAll('#presets [data-preset]').forEach(b=>{const on=models.includes(b.dataset.preset);b.classList.toggle("active",on);b.classList.toggle("off",!on&&models.length>=3)});
+ $("#priorityBox").hidden=models.length<2;
+ if(models.length<2){prioList=["equal"];return}
+ const opts=models.map(k=>[k,"Priorizar "+MODE_NAMES[k]]).concat([["equal","Dividir igualmente"]]);
+ $("#priorityList").innerHTML=opts.map(o=>{
+  const isChecked = prioList.includes(o[0]);
+  return `<label class="priority-opt${isChecked?" on":""}"><input type="checkbox" value="${o[0]}" ${isChecked?"checked":""}> ${o[1]}</label>`;
+ }).join("");
+ $("#priorityList").querySelectorAll("input").forEach(i=>{
+  i.onchange=()=>{
+   const val=i.value;
+   if(val==="equal"){
+    prioList=["equal"];
+   } else {
+    if(prioList.includes("equal")) prioList=[];
+    if(i.checked){
+     const max = models.length === 3 ? 2 : 1;
+     if(prioList.length >= max) prioList.shift();
+     prioList.push(val);
+    } else {
+     prioList=prioList.filter(x=>x!==val);
+    }
+    if(prioList.length===0) prioList=["equal"];
+   }
+   applyModels();
+  };
+ });
+ $("#distText").textContent=distText(distribution(models,prioList));
+}
+function applyModels(){profile=blendProfile();mode=models.length===1?models[0]:"custom";selected=recommendation();updateModelUI();render()}
+function toggleModel(k){
+ if(models.includes(k)){if(models.length>1)models=models.filter(x=>x!==k)}
+ else if(models.length===1&&models[0]==="recommended")models=[k];
+ else{if(models.length>=3)return;models=models.concat(k)}
+ applyModels();
+}
+const DATA={
+"Allosaurus":[10.9,3700,39.0,"th","",9.7,2593,39.8],
+"Austroraptor":[5.7,350,55.8,"th","",5.0,240,48.1],
+"Beipiaosaurus":[2.2,90,32.9,"th","",2.2,90,32.0],
+"Carnotaurus":[10.0,1800,55.6,"th","h1",9.0,1300,49.5],
+"Ceratosaurus":[8.8,1950,39.7,"th","h1",8.0,1450,40.3],
+"Deinosuchus":[13.1,10700,19.7,"cr","",11.9,8000,18.0],
+"Dilophosaurus":[7.8,977,52.3,"th","cr",7.0,700,47.5],
+"Herrerasaurus":[6.5,225,46.8,"th","",6.0,175,45.0],
+"Omniraptor":[5.9,660,52.3,"th","",5.0,395,46.8],
+"Pteranodon":[6.6,120,39.4,"pt","",6.0,90,37.8],
+"Troodon":[2.0,80,52.2,"th","",1.8,60,45.0],
+"Tyrannosaurus":[14.5,12300,33.7,"th","",13.2,9350,29.0],
+"Diabloceratops":[6.0,3900,37.8,"qd","h2",5.5,3000,34.2],
+"Dryosaurus":[3.4,185,50.4,"th","",3.0,130,45.0],
+"Gallimimus":[6.1,560,54.0,"th","",6.0,535,46.8],
+"Hypsilophodon":[1.9,23,39.6,"th","",1.8,20,39.6],
+"Kentrosaurus":[5.7,2200,39.6,"qd","sp",5.5,1950,39.6],
+"Maiasaura":[10.2,5300,40.1,"qd","",9.0,3700,42.3],
+"Pachycephalosaurus":[4.9,910,46.5,"th","dm",4.5,700,41.8],
+"Stegosaurus":[10.4,9300,30.6,"qd","pl",9.0,6000,29.1],
+"Tenontosaurus":[7.3,1830,43.2,"qd","",7.0,1600,40.7],
+"Triceratops":[9.9,12500,25.1,"qd","h3",9.0,9500,23.4]
+};
+function dinoShape(sh,f){
+ let g="";
+ if(sh==="th"){
+  g='<path d="M0 27Q20 25 38 22L41 34Q20 33 0 27Z"/><path d="M34 22Q46 12 62 16Q70 20 68 32Q58 39 40 35Z"/><path d="M60 18Q65 8 73 7L83 6Q94 6 99 12L98 17L72 19Q68 22 66 28Z"/><path d="M72 18L97 18L92 24L76 25Z" opacity=".85"/><path d="M44 30Q42 40 38 44L33 49H46L52 44Q58 38 56 30Z"/><path d="M53 31Q55 40 52 44L50 49H61L62 44Q64 38 62 31Z" opacity=".75"/><path d="M64 25L71 30L66 31Z"/><circle cx="82" cy="10.5" r="1.5" fill="#0d1511"/>';
+  g+='<path d="M42 22l6 4M46 20l5 5M58 24l5 3" stroke="#2a452d" stroke-width="1.2" fill="none" opacity=".85"/>';
+  if(f==="cr")g+='<path d="M70 12Q76 1 85 12Z" opacity=".85"/><path d="M72 8L76 2" stroke="#243d27" stroke-width="1"/>';
+  if(f==="dm")g+='<circle cx="80" cy="11" r="6" opacity=".95"/><path d="M76 8l3 3M81 7l2 4" stroke="#243d27" stroke-width="1"/>';
+  if(f==="h1")g+='<path d="M88 14L91 4L94 15Z"/><path d="M90 7L92 10" stroke="#101a13" stroke-width="1"/>';
+ }else if(sh==="qd"){
+  g='<path d="M26 26Q10 28 2 36Q14 38 28 36Z"/><ellipse cx="50" cy="27" rx="26" ry="14"/><path d="M70 24Q84 20 97 30Q95 39 82 39Q74 37 70 33Z"/><path d="M28 36H37V49H28ZM40 38H49V49H40ZM56 38H65V49H56ZM68 36H77V49H68Z"/><circle cx="88" cy="29" r="1.4" fill="#0d1511"/>';
+  g+='<path d="M36 26l8 3M52 24l9 2M62 28l6 3" stroke="#223b25" stroke-width="1.3" fill="none" opacity=".85"/>';
+  if(f==="h3")g+='<ellipse cx="68" cy="22" rx="9" ry="16" opacity=".85"/><path d="M92 26L107 17L94 32Z"/><path d="M84 22L92 5L90 26Z"/><path d="M88 12L94 15" stroke="#1f3622" stroke-width="1"/>';
+  if(f==="h2")g+='<ellipse cx="68" cy="22" rx="7.5" ry="13" opacity=".85"/><path d="M76 14L70 -1L80 16Z"/><path d="M82 15L85 0L87 18Z"/>';
+  if(f==="pl")for(let i=0;i<6;i++){const x=28+i*8;g+=`<path d="M${x} 17l4 -14l4 14z" opacity=".9"/><path d="M${x+2} 11l4 -2" stroke="#27422a" stroke-width="1"/>`}
+  if(f==="sp"){for(let i=0;i<5;i++){const x=26+i*9;g+=`<path d="M${x} 16l3 -10l3 10z" opacity=".9"/>`}g+='<path d="M0 36L-7 29L4 34ZM4 38L-5 38L4 35Z"/>'}
+ }else if(sh==="pt"){
+  g='<path d="M50 28L2 4Q20 30 40 34Z"/><path d="M50 28L98 6Q80 32 58 34Z" opacity=".8"/><ellipse cx="50" cy="30" rx="10" ry="5"/><path d="M58 28L82 22L96 26L80 30Z"/><path d="M60 24Q70 18 73 5L68 24Z"/><circle cx="76" cy="25" r="1.2" fill="#0d1511"/><path d="M14 12l8 10M86 14l-8 10" stroke="#27422a" stroke-width="1" opacity=".7"/>';
+ }else{
+  g='<path d="M0 38Q30 30 62 31L96 33Q101 36 96 39L62 41Q30 46 0 42Z"/><path d="M34 40L30 49H42L44 41ZM64 40L62 49H74L72 40Z"/><path d="M26 33l3 -4l3 4ZM36 32l3 -5l3 5ZM46 31l3 -5l3 5ZM56 31l3 -5l3 5ZM66 32l3 -4l3 4ZM76 33l3 -4l3 4Z" opacity=".95"/><circle cx="86" cy="33" r="1.4" fill="#0d1511"/><path d="M22 36q18 -3 36 -1t30 1" stroke="#3d663f" stroke-width="2" fill="none" opacity=".9"/>';
+ }
+ return g;
+}
+const SPECIES_IMG={Allosaurus:'allo.jpg',Austroraptor:'austro.webp',Beipiaosaurus:'Beipiaosaurus.jpg',Carnotaurus:'The_isle_carnotaurus_new_2020.webp',Ceratosaurus:'Ceratosaurus_The_Isle.webp',Deinosuchus:'deinosucus.jpg',Dilophosaurus:'Dilophosaurus.webp',Herrerasaurus:'Herrerasaurus.webp',Omniraptor:'omniraptor.webp',Pteranodon:'pteranodon.webp',Troodon:'Troodon_The_Isle.webp',Tyrannosaurus:'Tyrannosaurus.webp',Diabloceratops:'diablo.png',Dryosaurus:'dryosaurus.webp',Gallimimus:'Gallimimus.webp',Hypsilophodon:'Hypsilophodon_The_Isle.webp',Kentrosaurus:'The_isle_kentrosaurus.webp',Maiasaura:'mai.png',Pachycephalosaurus:'Pachycephalosaurus.webp',Stegosaurus:'The_isle_stegosaurus_new_2020.webp',Tenontosaurus:'Tenontosaurus.webp',Triceratops:'triceratops.png'};
+const LORE={
+Tyrannosaurus:['O Rei Tirano','Predador de topo das grandes planícies, reconhecido pelo corpo robusto, pescoço musculoso e uma mordida capaz de decidir confrontos em poucos golpes.','Territorial e dominante','Mordida pesada e pressão frontal'],
+Allosaurus:['O Caçador das Planícies','Um predador versátil que combina velocidade, alcance e ataques repetidos. Seu estilo favorece a perseguição curta e a pressão constante sobre presas feridas.','Móvel e oportunista','Sangramento e perseguição'],
+Carnotaurus:['O Touro Carnívoro','Construído para arrancadas explosivas, o Carnotaurus usa velocidade e impacto para encurtar distâncias antes que a presa consiga reagir.','Agressivo e veloz','Investidas e perseguição'],
+Ceratosaurus:['O Sobrevivente do Pântano','Resistente e adaptável, prospera em ambientes perigosos e pode transformar carcaças e confrontos prolongados em vantagem.','Resistente e oportunista','Pressão e resistência'],
+Deinosuchus:['O Monstro das Águas','Um emboscador aquático colossal. Esconde-se nas margens e transforma um erro de posicionamento em uma captura decisiva.','Paciente e territorial','Emboscada aquática'],
+Triceratops:['A Fortaleza com Chifres','Uma muralha viva. O Triceratops protege seu território e seu grupo com investidas capazes de interromper até os maiores predadores.','Defensivo e protetor','Investida e controle'],
+Stegosaurus:['O Guardião das Placas','Suas placas e cauda armada fazem dele uma ameaça defensiva formidável, especialmente quando consegue manter o inimigo ao alcance.','Defensivo e perigoso','Cauda e resistência'],
+Diabloceratops:['O Defensor do Rebanho','Compacto, forte e equipado para responder a ataques frontais, usa chifres e massa corporal para controlar o espaço.','Vigilante e territorial','Investida e contra-ataque']
+};
+const DEFAULT_LORE=['Sobrevivente do Evrima','Cada espécie ocupa um nicho próprio no ecossistema. Conhecer seu corpo, seu território e seus limites é a chave para sobreviver até o auge Elder Prime.','Adaptável e cauteloso','Escolha o momento certo'];
+// Máximos globais para normalização das barras
+const DATA_MAX={len:0,wt:0,spd:0};
+(function(){Object.values(DATA).forEach(d=>{if(!d)return;DATA_MAX.len=Math.max(DATA_MAX.len,d[0]);DATA_MAX.wt=Math.max(DATA_MAX.wt,d[1]);DATA_MAX.spd=Math.max(DATA_MAX.spd,d[2]);});})();
+function sceneSVG(u){
+ const s=sp(),d=DATA[s[0]];if(!d)return''; const [L,W,S,sh,f]=d, lore=LORE[s[0]]||DEFAULT_LORE,realImg=SPECIES_IMG[s[0]];
+ const col={"Carnívoro":"#d98a63","Herbívoro":"#a8cf78","Onívoro":"#82b9d6"}[s[1]]||'#a8cf78';
+ return `<div class="field-dossier"><div class="dossier-art"><div class="dossier-kicker">ARQUIVO DE CAMPO • EVRIMA 0.21+</div><img class="dino-real-art" src="https://www.theisle.info/${realImg}" alt="${s[0]}" onerror="this.style.opacity='0'"><div class="dossier-stamp">ELDER PRIME<br><b>87,5%</b></div></div><div class="dossier-copy"><div class="dossier-type">${s[1]} • ${s[2]}</div><h3>${s[0]}</h3><h4>${lore[0]}</h4><p>${lore[1]}</p><div class="dossier-tags"><span>${lore[2]}</span><span>${lore[3]}</span></div><div class="dossier-stats"><div><small>Peso</small><b>${W.toLocaleString('pt-BR')} kg</b></div><div><small>Comprimento</small><b>${L.toLocaleString('pt-BR')} m</b></div><div><small>Velocidade</small><b>${S.toLocaleString('pt-BR')} km/h</b></div></div></div></div>`;
+}
+let lastSp=null;
+function drawStage(){
+ const s=sp(),d=DATA[s[0]];if(!d)return;
+ const c={"Carnívoro":"var(--orange)","Herbívoro":"var(--green)","Onívoro":"var(--blue)"}[s[1]],fm=n=>n.toLocaleString("pt-BR");
+ const changed=lastSp!==s[0];
+ if(changed){
+  const old=$("#scene").querySelector(".field-dossier");
+  if(old){old.classList.add("dossier-fade");setTimeout(()=>{doDrawStage(s,d,c,fm,changed);},160);}
+  else{doDrawStage(s,d,c,fm,changed);}
+ }else{doDrawStage(s,d,c,fm,false);}
+}
+function doDrawStage(s,d,c,fm,animate){
+ $("#scene").innerHTML=sceneSVG("a");
+ $("#stName").textContent=s[0];$("#stRole").textContent=s[2];$("#stBadge").textContent=s[1];$("#stBadge").style.color=c;
+ const [L_prime,W_prime,S_prime,,,L_base,W_base,S_base]=d;
+ const weightMult=((W_prime/W_base - 1)*100).toFixed(0);
+ const multSign=weightMult>=0?`+${weightMult}%`:`${weightMult}%`;
+ $("#stChips").innerHTML=`
+  <div class="chip"><small>Comprimento Prime</small><strong>${fm(L_prime)} m</strong><span>Adulto (75%): ${fm(L_base)} m</span><div class="chip-bar"><span style="width:${(L_prime/DATA_MAX.len*100).toFixed(1)}%"></span></div></div>
+  <div class="chip"><small>Peso Elder Prime</small><strong>${fm(W_prime)} kg</strong><span>Adulto: ${fm(W_base)} kg (${multSign})</span><div class="chip-bar"><span style="width:${(W_prime/DATA_MAX.wt*100).toFixed(1)}%"></span></div></div>
+  <div class="chip"><small>Velocidade Prime</small><strong>${fm(S_prime)} km/h</strong><span>Adulto (75%): ${fm(S_base)} km/h</span><div class="chip-bar"><span style="background:var(--blue);width:${(S_prime/DATA_MAX.spd*100).toFixed(1)}%"></span></div></div>
+  <div class="chip"><small>Escala do modelo</small><strong>${fm(L_prime)} m</strong><span>Comprimento no auge Prime</span></div>
+  <div class="chip"><small>Pico de Crescimento</small><strong>87,5%</strong><span>Máx. no jogo (Evrima 0.21+)</span></div>
+  <div class="chip"><small>Status de Vida</small><strong>Elder Prime</strong><span>Auge antes da velhice</span></div>
+ `;
+ if(animate){
+  const dossier=$("#scene").querySelector(".field-dossier");
+  if(dossier){dossier.classList.add("dossier-in");}
+  $("#scene").classList.remove("pop");void $("#scene").offsetWidth;$("#scene").classList.add("pop");lastSp=s[0];
+ }
+}
+function profLabel(){return mode==="custom"?"Combinada — "+distText(distribution(models,prioList)):MODE_NAMES[mode]||"Personalizada"}
+function summaryText(){
+ const s=sp(),d=DATA[s[0]],fm=n=>n.toLocaleString("pt-BR");
+ return `${s[0]} — ${s[1]} (${s[2]})\nElder Prime (Auge em 87,5%): ${fm(d[1])} kg • ${fm(d[0])} m • ${fm(d[2])} km/h (Adulto 75%: ${fm(d[6])} kg)\nPerfil: ${profLabel()}\nMutações (${selected.length}/${slots}):\n`+selected.map((n,i)=>`${i+1}. ${n} — ${M.find(m=>m[0]===n)[2]}`).join("\n")+"\n\nThe Isle Build Lab v22";
+}
+function showSummary(){
+ if(!selected.length)return;
+ const s=sp(),d=DATA[s[0]],catName={atk:"Combate",surv:"Sobrevivência",breed:"Reprodução"},fm=n=>n.toLocaleString("pt-BR");
+ $("#sumName").textContent=s[0];$("#sumRole").textContent=s[1]+" • "+s[2];
+ const prof=profLabel();$("#sumScene").innerHTML=sceneSVG("b");
+ $("#sumMeta").innerHTML=`
+  <span class="pill rec">Perfil: ${prof}</span>
+  <span class="pill">${selected.length} de ${slots} slots usados</span>
+  <span class="pill" style="border-color:var(--gold);color:var(--gold)">Elder Prime: ${fm(d[1])} kg • ${fm(d[0])} m • ${fm(d[2])} km/h (87,5%)</span>
+ `;
+ $("#sumList").innerHTML=selected.map(n=>M.find(m=>m[0]===n)).map(m=>`<div class="summary-item"><div class="mname">${m[0]}</div><div class="desc">${m[2]}</div><div class="pills"><span class="pill ${m[1]==="atk"?"a":"s"}">${catName[m[1]]}</span></div></div>`).join("");
+ prepareSave();showView("summary");
+}
+function hideSummary(){showView("editor")}
+function applyPreset(kind){models=[kind];prioList=["equal"];applyModels()}
+function scoreMutation(m){
+ let a=m[3],v=m[4],tags=sp()[3],name=m[0],t=0;
+ if(["Epidermal Fibrosis","Osteosclerosis","Congenital Hypoalgesia","Cellular Regeneration","Traumatic Thrombosis"].includes(name))t=9;
+ if(name==="Gastronomic Regeneration"||name==="Hydroregenerative"||name==="Photosynthetic Tissue"||name==="Nocturnal")t=6;
+ if(name==="Increased Inspiratory Capacity"&&tags.includes("aquatic"))v+=4;
+ if(name==="Hydrodynamic"&&tags.includes("water"))v+=5;
+ if(name==="Submerged Optical Retention"&&tags.includes("water"))v+=3;
+ if(name==="Reinforced Tendons"&&tags.includes("climb"))v+=3;
+ if(name==="Enlarged Meniscus"&&tags.includes("climb"))v+=4;
+ if(name==="Augmented Tapetum"&&tags.includes("night"))v+=3;
+ if(name==="Nocturnal"&&tags.includes("night"))v+=3;
+ if(name==="Congenital Hypoalgesia"&&tags.includes("tank"))t=10;
+ if(name==="Osteosclerosis"&&tags.includes("fracture"))t=10;
+ if(name==="Truculency"&&tags.includes("charge"))a+=2;
+ if(name==="Tactile Endurance"&&(tags.includes("defender")||tags.includes("tank")))a+=2;
+ if(name==="Hemomania"&&tags.includes("bleed"))a+=3;
+ if(name==="Accelerated Prey Drive"&&(tags.includes("hunter")||tags.includes("apex")))a+=3;
+ if(name==="Hypermetabolic Inanition"&&tags.includes("apex"))a+=2;
+ if(name==="Epidermal Fibrosis"&&tags.includes("bleed"))t=10;
+ if(name==="Traumatic Thrombosis"&&tags.includes("bleed"))t=10;
+ if(name==="Cellular Regeneration")v=Math.max(v,7);
+ let b=Math.max(2,10-Math.abs(Math.min(10,a)-Math.min(10,v)));
+ if(["Efficient Digestion","Enhanced Digestion","Sustained Hydratation","Reinforced Tendons","Increased Inspiratory Capacity"].includes(name))b=8;
+ return [Math.min(10,a),Math.min(10,v),t,b];
+}
+const CURATED={
+Allosaurus:["Cellular Regeneration","Hemomania","Accelerated Prey Drive","Hematophagy","Sustained Hydratation","Hypermetabolic Inanition","Epidermal Fibrosis","Congenital Hypoalgesia"],
+Austroraptor:["Cellular Regeneration","Accelerated Prey Drive","Hematophagy","Hydrodynamic","Congenital Hypoalgesia","Hemomania","Reinforced Tendons","Efficient Digestion"],
+Carnotaurus:["Cellular Regeneration","Hemomania","Accelerated Prey Drive","Multichambered Lungs","Hematophagy","Epidermal Fibrosis","Hypermetabolic Inanition","Congenital Hypoalgesia"],
+Ceratosaurus:["Cellular Regeneration","Hemomania","Accelerated Prey Drive","Epidermal Fibrosis","Osteophagic","Hematophagy","Congenital Hypoalgesia","Efficient Digestion"],
+Deinosuchus:["Cellular Regeneration","Accelerated Prey Drive","Hemomania","Increased Inspiratory Capacity","Hydrodynamic","Submerged Optical Retention","Hematophagy","Wader"],
+Dilophosaurus:["Cellular Regeneration","Accelerated Prey Drive","Hematophagy","Congenital Hypoalgesia","Augmented Tapetum","Nocturnal","Sustained Hydratation","Hemomania"],
+Herrerasaurus:["Cellular Regeneration","Accelerated Prey Drive","Reinforced Tendons","Enlarged Meniscus","Hemomania","Congenital Hypoalgesia","Heightened Ghrelin","Featherweight"],
+Omniraptor:["Cellular Regeneration","Hemomania","Accelerated Prey Drive","Congenital Hypoalgesia","Hematophagy","Epidermal Fibrosis","Reinforced Tendons","Sustained Hydratation"],
+Pteranodon:["Cellular Regeneration","Reinforced Tendons","Efficient Digestion","Sustained Hydratation","Accelerated Prey Drive","Featherweight","Hematophagy","Congenital Hypoalgesia"],
+Troodon:["Cellular Regeneration","Accelerated Prey Drive","Augmented Tapetum","Nocturnal","Hematophagy","Reinforced Tendons","Efficient Digestion","Featherweight"],
+Tyrannosaurus:["Cellular Regeneration","Hemomania","Accelerated Prey Drive","Epidermal Fibrosis","Congenital Hypoalgesia","Hematophagy","Hypermetabolic Inanition","Efficient Digestion"],
+Diabloceratops:["Cellular Regeneration","Truculency","Hypervigilance","Epidermal Fibrosis","Osteosclerosis","Congenital Hypoalgesia","Tactile Endurance","Sustained Hydratation"],
+Dryosaurus:["Cellular Regeneration","Hypervigilance","Reinforced Tendons","Sustained Hydratation","Efficient Digestion","Xerocole Adaptation","Featherweight","Photosynthetic Regeneration"],
+Hypsilophodon:["Cellular Regeneration","Hypervigilance","Reinforced Tendons","Featherweight","Xerocole Adaptation","Sustained Hydratation","Enlarged Meniscus","Efficient Digestion"],
+Kentrosaurus:["Cellular Regeneration","Epidermal Fibrosis","Truculency","Tactile Endurance","Osteosclerosis","Hypervigilance","Congenital Hypoalgesia","Xerocole Adaptation"],
+Maiasaura:["Cellular Regeneration","Hypervigilance","Congenital Hypoalgesia","Epidermal Fibrosis","Osteosclerosis","Tactile Endurance","Truculency","Xerocole Adaptation"],
+Pachycephalosaurus:["Cellular Regeneration","Osteosclerosis","Truculency","Hypervigilance","Tactile Endurance","Photosynthetic Regeneration","Reinforced Tendons","Epidermal Fibrosis"],
+Stegosaurus:["Cellular Regeneration","Epidermal Fibrosis","Osteosclerosis","Truculency","Hypervigilance","Tactile Endurance","Efficient Digestion"],
+Tenontosaurus:["Cellular Regeneration","Truculency","Hypervigilance","Epidermal Fibrosis","Osteosclerosis","Tactile Endurance","Reinforced Tendons","Congenital Hypoalgesia"],
+Triceratops:["Cellular Regeneration","Truculency","Hypervigilance","Epidermal Fibrosis","Osteosclerosis","Congenital Hypoalgesia","Tactile Endurance","Efficient Digestion"],
+Beipiaosaurus:["Cellular Regeneration","Hydrodynamic","Increased Inspiratory Capacity","Submerged Optical Retention","Wader","Hypervigilance","Xerocole Adaptation","Enlarged Meniscus"],
+Gallimimus:["Cellular Regeneration","Hypervigilance","Reinforced Tendons","Multichambered Lungs","Efficient Digestion","Photosynthetic Regeneration","Xerocole Adaptation","Sustained Hydratation"]
+};
+const INCOMPATIBLE={
+Allosaurus:["Reinforced Tendons","Enlarged Meniscus","Hydrodynamic","Submerged Optical Retention","Wader"],
+Carnotaurus:["Reinforced Tendons","Enlarged Meniscus","Hydrodynamic","Submerged Optical Retention","Wader"],
+Ceratosaurus:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"],
+Tyrannosaurus:["Reinforced Tendons","Enlarged Meniscus","Hydrodynamic","Submerged Optical Retention","Wader"],
+Deinosuchus:["Reinforced Tendons","Featherweight","Augmented Tapetum"],
+Pteranodon:["Osteophagic","Truculency","Osteosclerosis","Wader"],
+Dryosaurus:["Hemomania","Accelerated Prey Drive","Osteophagic","Canibalistic"],
+Gallimimus:["Hemomania","Accelerated Prey Drive","Osteophagic","Canibalistic"],
+Hypsilophodon:["Hemomania","Accelerated Prey Drive","Osteophagic","Canibalistic"],
+Beipiaosaurus:["Hemomania","Accelerated Prey Drive","Osteophagic","Canibalistic"],
+Triceratops:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention","Augmented Tapetum"],
+Stegosaurus:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"],
+Maiasaura:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"],
+Kentrosaurus:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"],
+Diabloceratops:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"],
+Tenontosaurus:["Reinforced Tendons","Hydrodynamic","Submerged Optical Retention"]
+};
+const WATER_SP=["Deinosuchus","Austroraptor","Beipiaosaurus"];
+const NIGHT_SP=["Dilophosaurus","Troodon"];
+const AGILE_SP=["Herrerasaurus","Pteranodon","Dryosaurus","Hypsilophodon","Troodon","Beipiaosaurus","Gallimimus","Omniraptor","Pachycephalosaurus"];
+const SPRINT_SP=["Carnotaurus","Omniraptor","Gallimimus","Dryosaurus","Pachycephalosaurus","Herrerasaurus","Dilophosaurus","Troodon","Allosaurus","Austroraptor","Tenontosaurus","Hypsilophodon"];
+const FIT={
+ "Increased Inspiratory Capacity":WATER_SP,"Hydrodynamic":WATER_SP,"Submerged Optical Retention":WATER_SP,"Wader":WATER_SP,
+ "Augmented Tapetum":NIGHT_SP,"Nocturnal":NIGHT_SP,
+ "Reinforced Tendons":AGILE_SP,
+ "Enlarged Meniscus":["Herrerasaurus","Pteranodon","Hypsilophodon","Dryosaurus","Troodon","Beipiaosaurus"],
+ "Featherweight":["Herrerasaurus","Troodon","Pteranodon","Dryosaurus","Hypsilophodon","Omniraptor","Gallimimus","Dilophosaurus"],
+ "Multichambered Lungs":SPRINT_SP,
+ "Hypermetabolic Inanition":["Tyrannosaurus","Allosaurus","Carnotaurus","Ceratosaurus"],
+ "Heightened Ghrelin":["Tyrannosaurus","Ceratosaurus","Deinosuchus","Allosaurus","Stegosaurus","Triceratops","Maiasaura","Diabloceratops"],
+ "Osteophagic":["Allosaurus","Carnotaurus","Ceratosaurus","Dilophosaurus","Herrerasaurus","Omniraptor","Troodon","Austroraptor"]
+};
+const NEVER=["Canibalistic","Barometric Sensitivity","Infrasound Communication","Reabsorption","Reniculate Kidneys","Advanced Gestation","Prolific Reproduction"];
+function isCompatible(name){
+ const n=sp()[0];
+ if((INCOMPATIBLE[n]||[]).includes(name)||NEVER.includes(name))return false;
+ return !FIT[name]||FIT[name].includes(n);
+}
+function curBonus(name){
+ const list=CURATED[sp()[0]]||[],i=list.indexOf(name);if(i<0||!isCompatible(name))return 0;
+ const rec=models.includes("recommended")?distribution(models,prioList)["recommended"]/100:0;
+ return (8-i)*14*Math.max(rec,0.3);
+}
+function ranked(){return M.filter(m=>allowed(m)&&isCompatible(m[0])).map(m=>{let [a,v,t,b]=scoreMutation(m);let u=profile.aggression*a+profile.survival*v+profile.tank*t+profile.balance*b+curBonus(m[0]);return {m,a,v,t,b,u}}).sort((x,y)=>y.u-x.u)}
+function recommendation(){
+ let rank=ranked(),chosen=[];
+ let base=mode==="recommended"?(CURATED[sp()[0]]||[]):[];
+ for(let n of base){
+  if(chosen.length>=slots)break;
+  if(isCompatible(n)&&allowed(M.find(m=>m[0]===n)||[] )&&rank.some(x=>x.m[0]===n)&&!chosen.includes(n))chosen.push(n);
+ }
+ for(let x of rank){
+  if(chosen.length>=slots)break;
+  if(!chosen.includes(x.m[0])&&x.m[1]!=="breed")chosen.push(x.m[0]);
+ }
+ return chosen;
+}
+function render(){
+ let q=$("#search").value.toLowerCase(),arr=M.filter(m=>allowed(m)&&(!q||(m[0]+" "+m[2]).toLowerCase().includes(q))&&(filter==="all"||m[1]===filter));
+ $("#list").innerHTML="";
+ if(!arr.length){$("#list").innerHTML='<div class="empty">Nenhuma mutação encontrada.</div>';return}
+ let rec=recommendation();
+ arr.forEach(m=>{
+  let on=selected.includes(m[0]),isRec=rec.includes(m[0]),d=document.createElement("label");d.className="mutation"+(on?" selected":"");
+  let [a,v]=scoreMutation(m);
+  const ef=m[6];
+  const efTag=ef&&ef.vals[3]!=null?`<span class="pill pill-ef" title="${ef.stat} por estágio: Juv ${ef.vals[0]}${ef.unit} · Sub ${ef.vals[1]}${ef.unit} · Adu ${ef.vals[2]}${ef.unit} · Prime ${ef.vals[3]}${ef.unit}">Prime: ${ef.vals[3]}${ef.unit||''} ${ef.unit?'':'níveis'}</span>`:'';
+  d.innerHTML=`<input type="checkbox" ${on?"checked":""} ${!on&&selected.length>=slots?"disabled":""}><div><div class="mname">${m[0]}</div><div class="desc">${m[2]}</div><div class="pills"><span class="pill ${m[1]==="atk"?"a":"s"}">${m[1]==="atk"?"Combate":m[1]==="breed"?"Reprodução":"Sobrevivência"}</span><span class="pill">Ataque ${a}/10</span><span class="pill">Sobrev. ${v}/10</span>${efTag}${isRec?'<span class="pill rec">Na recomendação</span>':""}</div></div>`;
+  d.querySelector("input").addEventListener("change",e=>{if(e.target.checked&&selected.length<slots)selected.push(m[0]);else selected=selected.filter(x=>x!==m[0]);render()});$("#list").append(d);
+ });
+ $("#count").textContent=`${selected.length} / ${slots}`;$("#speciesInfo").textContent=sp()[1]+" • "+sp()[2];updateScore();drawStage();
+}
+function updateScore(){
+ let chosen=M.filter(m=>selected.includes(m[0])),a=0,t=0;
+ chosen.forEach(m=>{let z=scoreMutation(m);a+=z[0];t+=z[2]});
+ const total=a+t; let ap=total?Math.round(a/total*100):0,tp=total?100-ap:0;
+ $("#showSummary").disabled=!selected.length;const modeNames=MODE_NAMES,combo=mode==="custom"?distText(distribution(models,prioList)):"";
+ $("#grade").textContent=mode==="custom"?"Combinada":(modeNames[mode]||"Personalizada");
+ $("#gradeTitle").textContent=mode==="custom"?"BUILD COMBINADA":"MODELO DE BUILD";
+ $("#gradeText").textContent=chosen.length?`${chosen.length} mutações selecionadas para ${sp()[0]}. ${mode==="recommended"?"Perfil natural da espécie.":mode==="custom"?combo+".":"Modelo adaptado à espécie selecionada."}`:"Escolha um modelo ou personalize sua build.";
+}
+document.querySelectorAll("#slots button").forEach(b=>b.onclick=()=>{slots=+b.dataset.n;document.querySelectorAll("#slots button").forEach(x=>x.classList.toggle("active",x===b));selected=recommendation().slice(0,slots);render()});
+document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll(".filters button").forEach(x=>x.classList.toggle("active",x===b));render()});
+document.querySelectorAll('#presets [data-preset]').forEach(b=>b.onclick=()=>toggleModel(b.dataset.preset));
+$("#standard").onclick=()=>applyPreset('recommended');
+$("#clear").onclick=()=>{selected=[];render()};
+dino.onchange=applyModels;
+$("#search").oninput=render;
+$("#copyBtn").onclick=async()=>{const t=summaryText(),b=$("#copyBtn");try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement("textarea");a.value=t;document.body.append(a);a.select();try{document.execCommand("copy")}catch(_){}a.remove()}b.textContent="Copiado!";setTimeout(()=>b.textContent="Copiar resumo",1800)};
+$("#showSummary").onclick=showSummary;$("#backBtn").onclick=hideSummary;
+
+
+/* ===== Login + Minhas builds ===== */
+const mem={};let persistOk=true,nick=null,currentBuildId=null;
+const store={
+ get(k){try{return localStorage.getItem(k)}catch(e){persistOk=false;return mem[k]===undefined?null:mem[k]}},
+ set(k,v){try{localStorage.setItem(k,v)}catch(e){persistOk=false;mem[k]=v}},
+ del(k){try{localStorage.removeItem(k)}catch(e){persistOk=false;delete mem[k]}}
+};
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const bKey=()=>"isle_builds:"+nick.toLowerCase();
+function getBuilds(){try{const a=JSON.parse(store.get(bKey())||"[]");return Array.isArray(a)?a:[]}catch(e){return[]}}
+function putBuilds(a){store.set(bKey(),JSON.stringify(a))}
+function showView(v){const ids={editor:"#editorView",summary:"#summaryView",mybuilds:"#myBuildsView"};for(const k in ids)$(ids[k]).hidden=k!==v;window.scrollTo(0,0)}
+function updateUserBar(){$("#userName").textContent=nick;$("#mbCount").textContent=getBuilds().length}
+function doLogin(){
+ const v=$("#nickInput").value.trim().replace(/\s+/g," "),err=$("#loginErr");
+ if(v.length<2||v.length>20){err.textContent="Use entre 2 e 20 caracteres.";return}
+ if(!/^[\p{L}\p{N} _.\-\[\]()]+$/u.test(v)){err.textContent="Use apenas letras, números, espaço e _ . - ( ) [ ].";return}
+ err.textContent="";nick=v;store.set("isle_nick",v);
+ $("#login").hidden=true;$("#userBar").hidden=false;updateUserBar();showView("editor");
+ const fab=$("#fabSummary");if(fab)fab.style.display="";
+ if(!dino.options.length)updateDinoList();else render();
+}
+function logout(){store.del("isle_nick");nick=null;currentBuildId=null;$("#userBar").hidden=true;$("#nickInput").value="";$("#login").hidden=false;showView("editor");$("#nickInput").focus();const fab=$("#fabSummary");if(fab)fab.style.display="none";}
+function initAuth(){const n=store.get("isle_nick");if(n){nick=n;$("#login").hidden=true;$("#userBar").hidden=false;updateUserBar();const fab=$("#fabSummary");if(fab)fab.style.display="";}else{$("#nickInput").focus();const fab=$("#fabSummary");if(fab)fab.style.display="none";}}
+function saveMsg(t){$("#saveMsg").textContent=t}
+function prepareSave(){
+ let cur=currentBuildId?getBuilds().find(b=>b.id===currentBuildId):null;
+ if(cur&&cur.species!==sp()[0])cur=null;
+ let imp=null;if(cur&&cur.imported){imp=cur;cur=null}
+ if(!cur)currentBuildId=null;
+ $("#buildName").value=cur?cur.name:sp()[0]+" — "+profLabel();
+ $("#updateBuild").hidden=!cur;if(cur)$("#updateBuild").textContent="Atualizar “"+cur.name+"”";
+ saveMsg(imp?"Build importada de "+imp.author+": salvar cria uma cópia sua, com outro nome.":"");
+}
+function snapshot(){return{name:($("#buildName").value.trim()||sp()[0]).slice(0,40),species:sp()[0],models:models.slice(),prioList:prioList.slice(),slots,selected:selected.slice(),label:profLabel(),date:Date.now()}}
+function saveNew(){
+ const a=getBuilds();
+ if(a.length>=30){saveMsg("Limite de 30 builds salvas. Exclua alguma em Minhas builds.");return}
+ const b=snapshot();b.id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+ a.unshift(b);putBuilds(a);currentBuildId=b.id;updateUserBar();prepareSave();
+ saveMsg("Build salva em Minhas builds!"+(persistOk?"":" (armazenamento bloqueado: vale só nesta sessão)"));
+}
+function updateCur(){
+ const a=getBuilds(),i=a.findIndex(b=>b.id===currentBuildId);
+ if(i<0){saveNew();return}
+ const b=snapshot();b.id=currentBuildId;a[i]=b;putBuilds(a);prepareSave();saveMsg("Build atualizada!");
+}
+function loadBuild(b){
+ const idx=species.findIndex(x=>x[0]===b.species);if(idx<0)return false;
+ currentDiet="all";document.querySelectorAll("#typeFilters button").forEach(x=>x.classList.toggle("active",x.dataset.type==="all"));
+ $("#search").value="";updateDinoList();dino.value=idx;
+ slots=b.slots;document.querySelectorAll("#slots button").forEach(x=>x.classList.toggle("active",+x.dataset.n===slots));
+ models=b.models.slice();prioList=b.prioList.slice();applyModels();
+ selected=b.selected.filter(n=>M.some(m=>m[0]===n&&allowed(m)));render();
+ currentBuildId=b.id;return true;
+}
+// ── Busca reversa: quais espécies usam esta mutação ──────────────
+(function(){
+ const btn=$("#reverseBtn"),panel=$("#reversePanel"),search=$("#search");
+ function doReverse(){
+  const q=(search.value||'').trim().toLowerCase();
+  if(!q){panel.hidden=true;return;}
+  const matched=M.filter(m=>m[0].toLowerCase().includes(q)||m[2].toLowerCase().includes(q));
+  if(!matched.length){panel.innerHTML='<span style="color:var(--muted)">Nenhuma mutação encontrada.</span>';panel.hidden=false;return;}
+  const results=matched.map(mut=>{
+   const name=mut[0];
+   const species=Object.keys(DATA).filter(sp=>{
+    if((INCOMPATIBLE[sp]||[]).includes(name)||NEVER.includes(name))return false;
+    return !FIT[name]||FIT[name].includes(sp);
+   });
+   return `<div style="margin-bottom:10px"><b style="color:var(--txt)">${name}</b><div style="color:var(--muted);margin-top:3px">${species.length?species.join(' • '):'<i>Nenhuma espécie compatível</i>'}</div></div>`;
+  }).join('');
+  panel.innerHTML=results;panel.hidden=false;
+ }
+ btn.onclick=doReverse;
+ search.addEventListener("input",()=>{if(!panel.hidden)doReverse();});
+})();
+function renderMyBuilds(){
+ const a=getBuilds(),col={"Carnívoro":"var(--orange)","Herbívoro":"var(--green)","Onívoro":"var(--blue)"};
+ $("#mbTitle").textContent="Minhas builds — "+nick;$("#mbWarn").hidden=persistOk;
+ if(!a.length){$("#mbList").innerHTML='<div class="mb-empty">Você ainda não salvou nenhuma build.<br>Monte uma build, abra o resumo e clique em “Salvar build”, ou use “Importar build”.</div>';return}
+ $("#mbList").innerHTML=a.map(b=>{const x=species.find(y=>y[0]===b.species)||[b.species,"",""];
+  const head=b.imported?`<div class="mb-imp">🔒 Build criada por ${esc(b.author)}</div><h3 class="mb-sp">${esc(b.species)}</h3>`:`<h3>${esc(b.name)}</h3>`;
+  const sub=b.imported?esc(x[2]):`${esc(b.species)} • ${esc(x[2])}`;
+  return `<div class="mb-card" style="border-left-color:${col[x[1]]||"var(--green)"}" data-id="${esc(b.id)}">${head}<div class="muted">${sub}</div><div class="mb-chips"><span class="pill rec">${esc(b.label)}</span><span class="pill">${b.selected.length}/${b.slots} slots</span></div><div class="mb-chips">${b.selected.map(n=>`<span class="pill">${esc(n)}</span>`).join("")}</div><div class="muted" style="font-size:12px">${b.imported?"Importada":"Salva"} em ${new Date(b.date).toLocaleDateString("pt-BR")}</div><div class="mb-actions"><button class="btn primary" data-act="summary">Ver resumo</button><button class="btn" data-act="edit">Editar</button><button class="btn" data-act="code">Copiar código</button><button class="btn danger" data-act="del">Excluir</button></div></div>`}).join("");
+}
+function openMyBuilds(){renderMyBuilds();$("#mbMsg").textContent="";showView("mybuilds")}
+$("#mbList").addEventListener("click",e=>{
+ const btn=e.target.closest("button[data-act]");if(!btn)return;
+ const id=btn.closest(".mb-card").dataset.id,b=getBuilds().find(x=>x.id===id);if(!b)return;
+ if(btn.dataset.act==="del"){
+  if(btn.classList.contains("armed")){putBuilds(getBuilds().filter(x=>x.id!==id));if(currentBuildId===id)currentBuildId=null;updateUserBar();renderMyBuilds();$("#mbMsg").textContent="Build excluída.";return}
+  btn.classList.add("armed");btn.textContent="Confirmar exclusão?";setTimeout(()=>{if(btn.isConnected){btn.classList.remove("armed");btn.textContent="Excluir"}},3000);return;
+ }
+ if(btn.dataset.act==="code"){copyTo(makeCode(b,b.author||nick),btn,"Copiar código");return}
+ if(!loadBuild(b)){$("#mbMsg").textContent="Não foi possível abrir: a espécie “"+b.species+"” não existe mais.";return}
+ if(btn.dataset.act==="summary")showSummary();else showView("editor");
+});
+$("#loginBtn").onclick=doLogin;$("#nickInput").addEventListener("keydown",e=>{if(e.key==="Enter")doLogin()});
+$("#logoutBtn").onclick=logout;$("#myBuildsBtn").onclick=openMyBuilds;$("#openMy").onclick=openMyBuilds;
+$("#mbBack").onclick=()=>showView("editor");$("#saveBuild").onclick=saveNew;$("#updateBuild").onclick=updateCur;
+
+
+/* ===== Código de build (exportar / importar) ===== */
+const newId=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const b64e=t=>btoa(unescape(encodeURIComponent(t))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+const b64d=t=>{t=t.replace(/-/g,"+").replace(/_/g,"/");while(t.length%4)t+="=";return decodeURIComponent(escape(atob(t)))};
+function hash8(t){let h=2166136261;for(let i=0;i<t.length;i++){h^=t.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,"0")}
+function makeCode(b,author){const p=JSON.stringify({v:1,a:author,s:b.species,m:b.models,p:b.prioList,l:b.slots,x:b.selected});return"ISLE1."+b64e(p)+"."+hash8(p)}
+function labelFor(models,prio){return models.length===1?MODE_NAMES[models[0]]:"Combinada — "+distText(distribution(models,prio))}
+function parseCode(t){
+ const m=/^ISLE1\.([A-Za-z0-9_-]+)\.([0-9a-f]{8})$/.exec(String(t).replace(/\s+/g,""));if(!m)return null;
+ let raw,p;try{raw=b64d(m[1]);p=JSON.parse(raw)}catch(e){return null}
+ if(hash8(raw)!==m[2]||!p||typeof p!=="object")return null;
+ const valid=["recommended","aggressive","survival","tank","hunter"];
+ if(!species.some(x=>x[0]===p.s))return null;
+ if(!Array.isArray(p.m)||!p.m.length||p.m.length>3||!p.m.every(k=>valid.includes(k)))return null;
+ if(!Array.isArray(p.p)||p.p.length>3||!p.p.every(k=>k==="equal"||valid.includes(k)))return null;
+ if(![4,8,12,16].includes(p.l)||!Array.isArray(p.x)||!p.x.length||p.x.length>p.l)return null;
+ const names=new Set(M.map(x=>x[0]));if(!p.x.every(n=>names.has(n)))return null;
+ const author=typeof p.a==="string"&&/^[\p{L}\p{N} _.\-\[\]()]{2,20}$/u.test(p.a)?p.a:"jogador desconhecido";
+ return{author,species:p.s,models:p.m,prioList:p.p,slots:p.l,selected:p.x,ch:m[2]};
+}
+async function copyTo(text,btn,orig){
+ try{await navigator.clipboard.writeText(text)}catch(e){const a=document.createElement("textarea");a.value=text;document.body.append(a);a.select();try{document.execCommand("copy")}catch(_){}a.remove()}
+ btn.textContent="Copiado!";setTimeout(()=>{btn.textContent=orig},1800);
+}
+function importBuild(){
+ const msg=t=>{$("#mbMsg").textContent=t},r=parseCode($("#importCode").value);
+ if(!r){msg("Código inválido ou alterado. Peça para copiar o código novamente.");return}
+ const a=getBuilds();
+ if(a.some(b=>b.ch===r.ch)){msg("Você já importou essa build.");return}
+ if(a.length>=30){msg("Limite de 30 builds salvas. Exclua alguma antes de importar.");return}
+ a.unshift({id:newId(),name:"Build criada por "+r.author,species:r.species,models:r.models,prioList:r.prioList,slots:r.slots,selected:r.selected,label:labelFor(r.models,r.prioList),date:Date.now(),imported:true,author:r.author,ch:r.ch});
+ putBuilds(a);updateUserBar();$("#importCode").value="";$("#importBox").hidden=true;renderMyBuilds();msg("Build importada de "+r.author+"!");
+}
+$("#mbImport").onclick=()=>{$("#importBox").hidden=!$("#importBox").hidden;$("#mbMsg").textContent="";if(!$("#importBox").hidden)$("#importCode").focus()};
+$("#importCancel").onclick=()=>{$("#importBox").hidden=true;$("#importCode").value="";$("#mbMsg").textContent=""};
+$("#importGo").onclick=importBuild;
+$("#exportCode").onclick=()=>copyTo(makeCode(snapshot(),nick),$("#exportCode"),"Copiar código da build");
+
+// ── Som de clique (Web Audio API, sem arquivo externo) ──
+const _ac=(()=>{try{return new(window.AudioContext||window.webkitAudioContext)()}catch(e){return null}})();
+function playClick(){
+ if(!_ac)return;
+ if(_ac.state==="suspended")_ac.resume();
+ const o=_ac.createOscillator(),g=_ac.createGain();
+ o.connect(g);g.connect(_ac.destination);
+ o.type="sine";o.frequency.setValueAtTime(880,_ac.currentTime);
+ o.frequency.exponentialRampToValueAtTime(440,_ac.currentTime+0.06);
+ g.gain.setValueAtTime(0.08,_ac.currentTime);
+ g.gain.exponentialRampToValueAtTime(0.0001,_ac.currentTime+0.08);
+ o.start(_ac.currentTime);o.stop(_ac.currentTime+0.09);
+}
+document.addEventListener("click",e=>{
+ if(e.target.closest("button,select,.mutation,label[class],.slots button,.filters button,.priority-opt"))playClick();
+},true);
+
+// ── Comparação de builds ──
+function openCompare(){
+ const builds=getBuilds();
+ if(builds.length<2){$("#mbMsg").textContent="Precisa de pelo menos 2 builds para comparar.";return}
+ const opts=builds.map((b,i)=>{
+  const dino=b.species;
+  // b.name may already contain species, strip it to avoid repetition
+  let label=b.name||'';
+  if(label.startsWith(dino)){label=label.slice(dino.length).replace(/^[\s\-—]+/,'').trim()}
+  const sub=label?` — ${label}`:(b.author?` — por ${b.author}`:'');
+  const date=b.date?new Date(b.date).toLocaleDateString('pt-BR'):b.ts?new Date(b.ts).toLocaleDateString('pt-BR'):'';
+  return`<option value="${i}">${dino}${sub}${date?' ('+date+')':''}</option>`;
+ }).join('');
+ $("#cmpA").innerHTML=opts;
+ $("#cmpB").innerHTML=opts;
+ if(builds.length>1)$("#cmpB").value="1";
+ renderCompare();
+ $("#cmpModal").classList.remove("hidden");
+}
+function renderCompare(){
+ const builds=getBuilds();
+ const a=builds[+$("#cmpA").value],b=builds[+$("#cmpB").value];
+ if(!a||!b){$("#cmpResult").innerHTML='';return}
+ const dA=DATA[a.species],dB=DATA[b.species];
+ const setA=new Set(a.selected||[]),setB=new Set(b.selected||[]);
+ const sameSp=a.species===b.species;
+ // Mutation info helpers
+ function mutInfo(name){return M.find(x=>x[0]===name)}
+ function mutEffectStr(name){
+  const mi=mutInfo(name);if(!mi||!mi[6])return null;
+  const ef=mi[6],v=ef.vals[3]??ef.vals[2]??ef.vals[1]??ef.vals[0];
+  if(v==null)return null;
+  return`${ef.stat}: <b>${v}${ef.unit}</b> (Prime)`;
+ }
+ function mutChips(list,other){
+  if(!list.length)return'<span style="color:var(--muted);font-size:12px;font-style:italic">Nenhuma mutação</span>';
+  return list.map(n=>{
+   const cls=other.has(n)?'shared':'unique';
+   const tip=cls==='shared'?'Em ambas as builds':'Exclusiva desta build';
+   return`<span class="${cls}" title="${tip}">${n}</span>`;
+  }).join('');
+ }
+ // Only-in-A and only-in-B
+ const onlyA=(a.selected||[]).filter(n=>!setB.has(n));
+ const onlyB=(b.selected||[]).filter(n=>!setA.has(n));
+ const shared=(a.selected||[]).filter(n=>setB.has(n));
+ // Conflicting: a mut in A that is INCOMPATIBLE/NEVER with a mut in B
+ function getConflicts(){
+  const conflicts=[];
+  for(const na of (a.selected||[])){
+   for(const nb of (b.selected||[])){
+    if(na===nb)continue;
+    const mia=mutInfo(na),mib=mutInfo(nb);
+    // check restrictions array
+    if(mia&&mia[6]){
+     const r=mia[6];
+     if((r.never||[]).includes(nb)||(r.incompatible||[]).includes(nb))
+      conflicts.push([na,nb]);
+    }
+   }
+  }
+  return conflicts;
+ }
+ const conflicts=getConflicts();
+ // Stat section — only show if different species
+ let statsHtml='';
+ if(!sameSp&&dA&&dB){
+  function statRow(label,vA,vB,unit='',higher=true){
+   const aB=higher?vA>vB:vA<vB,bB=higher?vB>vA:vB<vA;
+   return`<div class="cmp-stat-row">
+    <span class="val${aB?' better':''}">${typeof vA==='number'?vA.toLocaleString('pt-BR'):vA}${unit}</span>
+    <span class="label">${label}</span>
+    <span class="val${bB?' better':''}">${typeof vB==='number'?vB.toLocaleString('pt-BR'):vB}${unit}</span>
+   </div>`;
+  }
+  statsHtml=`<div class="cmp-stats-section">
+   <div class="cmp-stat-header"><span>BUILD A</span><span>STATS ELDER PRIME</span><span>BUILD B</span></div>
+   ${statRow('Comprimento',dA[0],dB[0],' m')}
+   ${statRow('Peso',dA[1],dB[1],' kg')}
+   ${statRow('Velocidade',dA[2],dB[2],' km/h')}
+  </div>`;
+ }
+ // Slots info
+ const slotsA=a.slots||8,slotsB=b.slots||8;
+ const usedA=(a.selected||[]).length,usedB=(b.selected||[]).length;
+ const dateA=a.date?new Date(a.date).toLocaleDateString('pt-BR'):a.ts?new Date(a.ts).toLocaleDateString('pt-BR'):'—';
+ const dateB=b.date?new Date(b.date).toLocaleDateString('pt-BR'):b.ts?new Date(b.ts).toLocaleDateString('pt-BR'):'—';
+ // Conflicts section
+ let conflictsHtml='';
+ if(conflicts.length){
+  const uniq=[...new Map(conflicts.map(([x,y])=>[x<y?x+'|'+y:y+'|'+x,[x,y]])).values()];
+  conflictsHtml=`<div class="cmp-conflicts">
+   <div class="cmp-section-label">⚠️ Incompatibilidades entre builds</div>
+   <div class="cmp-conflict-list">${uniq.map(([x,y])=>`<span class="cmp-conflict-chip">${x} <span style="opacity:.5">✕</span> ${y}</span>`).join('')}</div>
+  </div>`;
+ }
+ // Build display helpers (needed inside effectRows below)
+ const nameA=a.name&&a.name!==a.species?a.name:null;
+ const nameB=b.name&&b.name!==b.species?b.name:null;
+ const authorA=a.author?`Build criada por ${a.author}`:(a.imported?'Build importada':null);
+ const authorB=b.author?`Build criada por ${b.author}`:(b.imported?'Build importada':null);
+ const subA=nameA||authorA;
+ const subB=nameB||authorB;
+ const titleA=a.species, titleB=b.species;
+ // Effect rows — all mutations that appear in either build, with values side by side
+ const allMutNames=[...new Set([...(a.selected||[]),...(b.selected||[])])];
+ function effectRows(){
+  const rows=allMutNames.map(n=>{
+   const mi=mutInfo(n);
+   if(!mi)return'';
+   const inA=setA.has(n),inB=setB.has(n);
+   const ef=mi[6];
+   const eldVal=ef?(ef.vals[3]??ef.vals[2]??ef.vals[1]??ef.vals[0]):null;
+   const valStr=eldVal!=null?`${eldVal}${ef.unit}`:'—';
+   const descShort=mi[2].length>60?mi[2].slice(0,57)+'…':mi[2];
+   const cellA=inA?`<span class="cmp-ef-val ${inA&&inB?'shared':'unique'}">${valStr}</span>`:`<span class="cmp-ef-absent">—</span>`;
+   const cellB=inB?`<span class="cmp-ef-val ${inA&&inB?'shared':'unique'}">${valStr}</span>`:`<span class="cmp-ef-absent">—</span>`;
+   return`<div class="cmp-ef-row">
+    <div class="cmp-ef-a">${cellA}</div>
+    <div class="cmp-ef-mid"><span class="cmp-ef-name">${n}</span><span class="cmp-ef-desc">${descShort}</span></div>
+    <div class="cmp-ef-b">${cellB}</div>
+   </div>`;
+  }).join('');
+  return rows?`<div class="cmp-effects-section">
+   <div class="cmp-effects-header"><span>${titleA}</span><span>Efeito (Prime)</span><span>${titleB}</span></div>
+   ${rows}
+  </div>`:'';
+ }
+ const effectsHtml=effectRows();
+ // Summary diff
+ let diffHtml='';
+ if(onlyA.length||onlyB.length||shared.length){
+  diffHtml=`<div class="cmp-diff-row">
+   <div class="cmp-diff-side"><span class="cmp-diff-label">Só na BUILD A (${onlyA.length})</span><div class="cmp-diff-chips">${onlyA.length?onlyA.map(n=>`<span class="unique">${n}</span>`).join(''):'<span class="cmp-none">—</span>'}</div></div>
+   <div class="cmp-diff-center"><span class="cmp-diff-label" style="text-align:center;display:block">Em comum<br><b style="color:var(--green);font-size:18px">${shared.length}</b></span></div>
+   <div class="cmp-diff-side" style="text-align:right"><span class="cmp-diff-label">Só na BUILD B (${onlyB.length})</span><div class="cmp-diff-chips" style="justify-content:flex-end">${onlyB.length?onlyB.map(n=>`<span class="unique">${n}</span>`).join(''):'<span class="cmp-none">—</span>'}</div></div>
+  </div>`;
+ }
+ $("#cmpTitle").innerHTML=`⚖️ <span style="color:var(--blue)">${titleA}</span> <span style="color:var(--muted);font-weight:400">vs</span> <span style="color:var(--green)">${titleB}</span>`;
+ $("#cmpResult").innerHTML=`
+  <div class="cmp-cols">
+   <div class="cmp-col">
+    <h3>${titleA}</h3>
+    ${subA?`<div class="cmp-byline">${subA}</div>`:''}
+    <div class="cmp-sp">${usedA}/${slotsA} slots • ${dateA} • ${a.label||'—'}</div>
+    <div class="cmp-mut">${mutChips(a.selected||[],setB)}</div>
+   </div>
+   <div class="cmp-col">
+    <h3>${titleB}</h3>
+    ${subB?`<div class="cmp-byline">${subB}</div>`:''}
+    <div class="cmp-sp">${usedB}/${slotsB} slots • ${dateB} • ${b.label||'—'}</div>
+    <div class="cmp-mut">${mutChips(b.selected||[],setA)}</div>
+   </div>
+  </div>
+  ${diffHtml}
+  ${effectsHtml}
+  ${statsHtml}
+  ${conflictsHtml}
+  <div class="cmp-legend"><span style="color:var(--green)">■</span> Em ambas &nbsp; <span style="color:var(--blue)">■</span> Exclusiva</div>
+ `;
+}
+$("#cmpA").onchange=renderCompare;
+$("#cmpB").onchange=renderCompare;
+$("#cmpClose").onclick=()=>$("#cmpModal").classList.add("hidden");
+$("#cmpModal").onclick=e=>{if(e.target===$("#cmpModal"))$("#cmpModal").classList.add("hidden")};
+$("#mbCompare").onclick=openCompare;
+
+updateDinoList();
+applyPreset('recommended');
+initAuth();
+</script>
+</body></html>

@@ -3,7 +3,7 @@
 Planejador de builds de mutações para **The Isle: Evrima**.  
 Gratuito, sem cadastro, funciona direto no navegador.
 
-🔗 **[Acessar o Build Lab](https://SEU_USUARIO.github.io/the-isle-build-lab/)**
+🔗 **[Acessar o Build Lab](https://the-isle-build-lab.netlify.app)**
 
 ---
 

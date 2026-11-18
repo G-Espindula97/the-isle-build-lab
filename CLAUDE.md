@@ -11,5 +11,5 @@ Responda sempre em português do Brasil.
 - Testar localmente: `npx http-server@14.1.1 -p 5180 -c-1` → http://localhost:5180
 
 ## Regras
-- **Backups nunca são substituídos:** todo backup leva nome + data/hora (pasta `C:\Users\Tiufo\BACKUPS PROJETOS\BUILD LAB`).
+- **Backups nunca são substituídos:** todo backup leva nome + data/hora (pasta local de backups do autor).
 - Projeto de fã, sem afiliação com The Isle / Afterthought — manter esse aviso.

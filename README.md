@@ -50,3 +50,13 @@ Encontrou um dado errado? Abra uma **Issue** ou envie um **Pull Request**.
 ---
 
 *Projeto não oficial. Não afiliado à Afterthought LLC ou The Isle.*
+
+---
+
+## 🔒 Privacidade (LGPD)
+
+O Build Lab **não tem cadastro, servidor ou banco de dados** e **não coleta dados pessoais**.
+
+- O nick e as builds ficam salvos **apenas no seu navegador** (`localStorage`). Nada é enviado para servidores.
+- Para apagar tudo, use o botão **"Apagar meus dados deste navegador"** no rodapé da página.
+- As fontes (Google Fonts) e as imagens dos dinossauros (theisle.info) são carregadas desses serviços, que recebem o endereço IP do navegador, como em qualquer site.

@@ -13,3 +13,11 @@ Responda sempre em português do Brasil.
 ## Regras
 - **Backups nunca são substituídos:** todo backup leva nome + data/hora (pasta local de backups do autor).
 - Projeto de fã, sem afiliação com The Isle / Afterthought — manter esse aviso.
+
+## Mapa do `index.html` (~1000 linhas — use grep, não leia tudo)
+- `<style>` no topo · telas: `#editorView`, `#summaryView`, `#myBuildsView` (troca via `showView`)
+- Dados: `DATA` (espécies), `SPECIES_IMG`, `LORE`, `CURATED`, `INCOMPATIBLE`, `NEVER`, listas `WATER_SP/NIGHT_SP/AGILE_SP/SPRINT_SP`
+- Perfis/modelos de build: `MODE_NAMES`, `presetProfile`, `distribution`, `blendProfile`, `applyModels`, `toggleModel`
+- Recomendação: `scoreMutation`, `isCompatible`, `allowed`, `ranked`, `recommendation`, `render`, `updateScore`
+- Visual do dino: `dinoShape`, `sceneSVG`, `drawStage` · resumo: `summaryText`, `showSummary`
+- Login + Minhas builds (bloco `/* ===== Login + Minhas builds ===== */`): `doLogin`, `getBuilds/putBuilds`, `saveNew`, `loadBuild`, `renderMyBuilds`
